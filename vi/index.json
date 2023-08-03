@@ -1,0 +1,183 @@
+[
+{
+	"uri": "/vi/5-updatecheck/5.1-updatecode/",
+	"title": "Cập Nhật Code",
+	"tags": [],
+	"description": "",
+	"content": "Trình tự thực hiện Tại giao diện Terminal trong Visual Studio Code Thực hiện câu lệnh git pull để cập nhật tất cả những thay đổi mới nhất của Github Repository của chúng ta về máy local git pull Tại thư mục src, chọn App.js, ta thực hiện thay đổi \u0026lt;p\u0026gt;Welcome to React-Simple-App\u0026lt;br /\u0026gt; Thành\n\u0026lt;p style={{color: \u0026#34;#32ff7e\u0026#34;}}\u0026gt;Welcome to React-Simple-App\u0026lt;br /\u0026gt; Mục đích là thay đổi màu của Text trong App từ trắng sang xanh lá. Bạn có thể hiểu rõ hơn trong bước kiểm tra tiếp theo\nSave lại. Sau đó tiến hành push code lên Github Repository của chúng ta.\nBằng cách thực hiện lần lượt các câu lệnh phía dưới. Chức năng từng câu lệnh bạn có thể xem lại ở bước 3.5 git add .\rgit commit -m \u0026#34;Edit Text Color\u0026#34;\rgit push Vậy là chúng ta đã thực hiện xong bước Cập Nhật Code. Tiếp theo chúng ta sẽ Kiểm tra lại quá trình CI/CD "
+},
+{
+	"uri": "/vi/",
+	"title": "CI/CD với Github Actions",
+	"tags": [],
+	"description": "",
+	"content": "CI/CD với Github Actions Tổng quan Trong bài Lab này, chúng ta sẽ cùng tìm hiểu các bước xây dựng quy trình CI/CD để tiến hành để build một Docker Image cho 1 ứng dụng chạy bằng React và triển khai ứng dụng đó lên một Server chạy Docker thông qua Github Actions.\nNội dung Giới thiệu Các bước chuẩn bị Thao tác với Github Repository Thao tác với Github Actions Test và Kiểm tra Dọn dẹp tài nguyên "
+},
+{
+	"uri": "/vi/3-githubrepo/3.1-fork/",
+	"title": "Fork Repository",
+	"tags": [],
+	"description": "",
+	"content": "Fork Repository Fork là một tín năng trong Git dùng để thực hiện sao chép Repository từ chủ sở hữu khác về đến Github Account của mình. Nhờ đó bạn có thể sử dụng chúng như một Repository của mình, do chính mình tự tạo ra.\nTrình tự thực hiện Từ giao diện trang chủ của bạn trên Github Nhập dấu /, cửa sổ tìm kiếm hiện ra, nhập huydinh39/react-simple-app Tại mục Reporsitories chọn huydinh39/react-simple-app Chúng ta sẽ được đưa đến trang repository react-simple-app của owner huydinh39 Tại giao diện này, ta chọn Fork Chúng ta sẽ được đưa đến trang Create new fork Tại mục Repository name, nhập react-app-github-actions Sau đó chọn Create fork Vậy là chúng ta đã hoàn thành Fork Repository của một owner khác thành Repository của chúng ta "
+},
+{
+	"uri": "/vi/1-introduce/",
+	"title": "Giới thiệu",
+	"tags": [],
+	"description": "",
+	"content": "Chúng ta sẽ tìm hiểu một số khái niệm chính liên quan đến Workshop này: CICD Github Github Actions Docker Docker Hub CICD CI là viết tắt của Continuous Integration (tích hợp liên tục).\nCD là viết tắt của Continuous Delivery (chuyển giao liên tục) hoặc Continuous Deployment (triển khai liên tục).\nKhái niệm CI/CD thường đề cập đến việc tự động hóa trong quy trình phát triển phần mềm và chuyển giao sản phẩm, giúp cho việc tích hợp diễn ra nhanh hơn và sản phẩm hoàn thiện được chuyển đến người dùng trong thời gian ngắn nhất.\nGithub Github là một hệ thống quản lý dự án cũng như các phiên bản Code. Nền tảng này được ví như mạng xã hội dành riêng cho các lập trình viên. Tại đó, coder được quyền clone lại mã nguồn từ một Repository.\nGitHub cũng đóng vai trò là một dịch vụ máy chủ Repository. Mục đích sử dụng để lưu trữ code, mỗi người có thể tạo tài khoản riêng và tạo ra kho chứa của mình. Nhờ thế, mỗi lần cần tái sử dụng, bạn nhanh chóng tìm thấy và vận dụng dễ dàng.\nGithub Actions Github Actions giúp chúng ta tự động hóa quy trình phát triển phần mềm tại nơi chúng ta lưu trữ code và kết hợp với pull request và issues. Chúng ta có thể viết các tác vụ riêng lẻ, được gọi là các actions và kết hợp các actions đó lại với nhau để tạo ra một workflow theo ý của chúng ta. Workflow là các tiến trình tự động mà bạn có thể thiết lập trong repository của mình để build, test, publish package, release, hoặc deploy dự nào trên Github.\nVới Github Actions chúng ta có thể tích hợp Continuous Integration (CI) và Continuous Deployment (CD) trực tiếp trên repository của mình\nDocker Docker là nền tảng phần mềm cho phép bạn dựng, kiểm thử và triển khai ứng dụng một cách nhanh chóng. Docker đóng gói phần mềm vào các đơn vị tiêu chuẩn hóa được gọi là container có mọi thứ mà phần mềm cần để chạy, trong đó có thư viện, công cụ hệ thống, mã và thời gian chạy.\nBằng cách sử dụng Docker, bạn có thể nhanh chóng triển khai và thay đổi quy mô ứng dụng vào bất kỳ môi trường nào và biết chắc rằng mã của bạn sẽ chạy được.\nDocker Hub Docker Hub là một dịch vụ do Docker cung cấp, cho phép tìm kiếm và chia sẻ các container images.\nLà nơi giúp bạn có thể lưu trữ các chương trình đã được đóng gói (image) của mình và tìm kiếm các image được người khác publish.\n"
+},
+{
+	"uri": "/vi/4-githubactions/4.1-createsecrets/",
+	"title": "Tạo Secrets",
+	"tags": [],
+	"description": "",
+	"content": "Secrets Secrets là một tín năng trong Github Actions dùng để lưu trữ các loại xác thực, chúng ta có thể sử dụng các Secret này để làm các biến môi trường trong Workflow của quy trình CI/CD mà không làm lộ thông tin Secret của chúng ta.\nTrước khi thực hiện các bước sau, ta cần tổng hợp và chuẩn bị thông tin cho các Secret mà ta sẽ tạo trong bước này.\nSecret Content Detail DOCKER_HUB_USERNAME \u0026lt;your_dockerhub_username\u0026gt; username tài khoản Dockerhub DOCKER_HUB_PASSWORD \u0026lt;your_dockerhub_password\u0026gt; password tài khoản Dockerhub SSH_PRIVATE_KEY \u0026lt;your_ssh_private_key\u0026gt; Nội dung trong file aws_keypair.pem SSH_USERNAME ec2-user User mặc định để SSH vào docker_server SSH_HOST \u0026lt;your_ip_address_docker_server\u0026gt; Địa chỉ IP Publish của docker_server ec2-user này user mặc định của các Linux Instance được tạo từ Amazon Machine Image (AMI)\nTrình tự thực hiện Từ giao diện Repository react-app-github-actions của bạn trên Github Chọn Setting, chúng ta sẽ được chuyển đến trang Settings Tại mục Secrets and variables, chọn Actions Chọn New repository secrets Chúng ta chuyển đến trang Actions secrets/New secret\nTại giao diện này, ta lần lượt tạo 5 Sercret ta đã liệt kê ở phía trên Tạo Secret: DOCKER_HUB_USERNAME\nTại mục Name, nhập DOCKER_HUB_USERNAME Tại mục Secrets, nhập username tài khoản Dockerhub Chọn Add secret Tạo Secret: DOCKER_HUB_PASSWORD\nChọn New repository secrets Tại mục Name, nhập DOCKER_HUB_PASSWORD Tại mục Secrets, nhập password tài khoản Dockerhub Chọn Add secret Tạo Secret: SSH_PRIVATE_KEY\nChọn New repository secrets Tại mục Name, nhập SSH_PRIVATE_KEY Tại mục Secrets, dán nội dung được copy từ file aws_keypair.pem ở bước 2.6 Chọn Add secret Tạo Secret: SSH_USERNAME\nChọn New repository secrets Tại mục Name, nhập SSH_USERNAME Tại mục Secrets, nhập ec2-user Chọn Add secret Tạo Secret: SSH_HOST\nChọn New repository secrets Tại mục Name, nhập SSH_HOST Tại mục Secrets, nhập IP Publish của docker_server được lưu lại ở bước 2.6 Chọn Add secret Vậy là bạn đã hoàn thành bước Tạo Secrets, bao gồm 5 Secret "
+},
+{
+	"uri": "/vi/2-preparation/2.1-createvpc/",
+	"title": "Tạo VPC ",
+	"tags": [],
+	"description": "",
+	"content": "Trình tự thực hiện Truy cập giao diện quản trị dịch vụ VPC Chọn Your VPC Chọn Create VPC Tại trang Create VPC Tại mục Resources, chọn VPC only Tại mục Name tag, nhập Lab-VPC Tại mục IPv4 CIDR, nhập 10.10.0.0/16 Chọn Create VPC Hoàn thành Tạo VPC Lab-VPC "
+},
+{
+	"uri": "/vi/2-preparation/",
+	"title": "Các bước chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ lần lượt tạo:\n1 VPC 1 Public Subnet 1 Internet Gateway 1 Route Table 1 Security Group 1 Máy chủ EC2 được cài đặt Docker Tổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như sau:\nĐể tìm hiểu thêm cách tạo các EC2 instance, VPC, Subnet, Internet Gateway, Route table, Security Group các bạn có thể tham khảo các bài lab :\nGiới thiệu về Amazon EC2 Làm việc với Amazon VPC Nội dung 2.1 Tạo VPC 2.2 Tạo Public Subnet 2.3 Tạo Internet Gateway 2.4 Tạo Route Table 2.5 Tạo Security Group 2.6 Tạo EC2 Instance 2.7 Cài đặt Docker "
+},
+{
+	"uri": "/vi/5-updatecheck/5.2-checkagain/",
+	"title": "Kiểm tra lại quá trình CI/CD",
+	"tags": [],
+	"description": "",
+	"content": "Trình tự thực hiện Từ giao diện Repository react-app-github-actions của bạn trên Github\nChọn Actions, chúng ta sẽ được chuyển đến giao diện Actions Tại mục All workflows, ta thấy 1 workflow đang run là Edit Text Color, đây là commit message mà chúng ta đã thực hiện trong bước 5.1 Chờ khoảng 2-3 phút, tại giao diện Actions, ta thấy workflow Edit Text Color đã hoàn thành Mở trình duyện web mới, truy cập đường link theo cú pháp http://\u0026lt;your_ip_address_docker_server\u0026gt;:3000, rồi xem kết quả\nVới \u0026lt;your_ip_address_docker_server\u0026gt; là địa chỉ IP Publish của docker_server\nHoặc reload lại cửa sổ đã mở bước 4.3\nTa thấy màu của dòng chữ đã thay đổi từ trắng sang xanh lá\nVậy là chúng ta đã hoàn thành bước Cập Nhật và Kiểm tra lại quá trình CI/CD Xin chúc mừng, đến đây bạn đã hoàn thành bài Lab. Tiếp theo chúng ta sẽ dọn dẹp các tài nguyên trên AWS để tránh phát sinh chi phí.\n"
+},
+{
+	"uri": "/vi/3-githubrepo/3.2-createtoken/",
+	"title": "Tạo Access Token",
+	"tags": [],
+	"description": "",
+	"content": "Access Token Chúng ta cần tạo Access Token để có thể thực hiện thao tác như push, pull, commit và thay đổi repository.\nTrình tự thực hiện Từ giao diện trang chủ của bạn trên Github Nhấn vào biểu tượng avatar user bên góc trên bên phải, chọn Settings Chúng ta sẽ được đưa đến trang Settings Cuộn chuột xuống dưới cùng, chọn Developer Settings Tại trang Developer Settings, cuộn chuột xuống dưới cùng, tại mục Personal access tokens, chọn Tokens (classic) Tại mục Personal access tokens (classic), chọn Generate new token, sau đó chọn General new tokens (classic) (Bước này có thể Github sẽ bắt bạn cung cấp mật khẩu đăng nhập) Chúng ta sẽ được đưa đến trang New persional access tokens (classic) Tại mục Note, nhập github_token Tại mục Select scopes, click chọn 2 mục là repo và workflow Cuộn chuột xuống dưới cùng, chọn Generate token Chúng ta sẽ được cung cấp một dãy token mới, hãy lưu lại token này để dùng cho những bước tiếp theo token này sau khi tạo chỉ xuất hiện 1 lần duy nhất, khi reload lại trang thì sẽ mất, nên lưu giữ cẩn thận\n"
+},
+{
+	"uri": "/vi/2-preparation/2.2-createsubnet/",
+	"title": "Tạo Public Subnet",
+	"tags": [],
+	"description": "",
+	"content": "Trình tự thực hiện Trong giao diện VPC Chọn Subnets Chọn Create subnet Tại trang Create subnet Tại mục VPC ID, chọn Lab-VPC Tại mục Subnet name, nhập Lab-PUS Tại mục Availability Zone, chọn Availability zone đầu tiên hoặc để No preference Tại mục IPv4 CIRD block, nhập 10.10.1.0/24 Kéo xuống cuối trang, chọn Create subnet Hoàn thành tạo Lab-PUS. Chọn Lab-PUS Chọn Actions Chọn Edit subnet settings Trang Edit subnet settings hiện ra Tại mục Auto-assign IP settings, chọn Enable auto-assign public IPv4 address Chọn Save Vậy là bạn đã hoàn thành tạo Publish Subnet Lab-PUS "
+},
+{
+	"uri": "/vi/4-githubactions/4.2-createworkflow/",
+	"title": "Tạo Workflow",
+	"tags": [],
+	"description": "",
+	"content": "Workflow Workflow là một thủ tục tự động, được tạo bởi một hay nhiều job và các job này có thể chạy theo định kỳ hoặc trigger chạy khi nhận được một event nào đó.\nHay nói một cách khác, Workflow là tổng hợp các bước để xây dựng một trình tự CI/CD.\nTrình tự thực hiện Từ giao diện Repository react-app-github-actions của bạn trên Github Chọn Actions, chúng ta sẽ được chuyển đến trang Get started with Github Actions Chọn set up a workflow yourself Chúng ta chuyển đến trang Code để Edit Workflow Chúng ta sẽ tiến hành tìm hiểu từng bước để xây dựng Workflow Đầu tiên chúng ta đặt tên cho Workflow là CI/CD name: CI/CD Tiếp theo chúng ta định nghĩa sự kiện trigger workflow là khi có sự kiện push trên branch main.\nCó thể thêm nhánh khác nếu như Github Repository của chúng ta có nhiều nhánh khác. # Trigger by push event on branch main\ron:\rpush:\rbranches:\r- main Tiếp đến là định nghĩa các biến môi trường dành cho Workflow này, với 5 thông tin lấy từ Secrets đã được tạo ở bước 4.1\nDOCKER_HUB_REPOSITORIES là biến đặt tên cho Repository của chúng ta trên Dockerhub. Ở đây chúng ta setting mặc định giống tên của Repository trên Github. # Define all environment variables (Previously defined in secrets and variables)\renv:\rDOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}\rDOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}\rDOCKER_HUB_REPOSITORIES: react-app-github-actions\rSSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}\rSSH_USERNAME: ${{ secrets.SSH_USERNAME }}\rSSH_HOST: ${{ secrets.SSH_HOST }} Tiếp đến là phần quan trọng nhất, jobs sẽ chứa các job thực hiện quá trình CI/CD.\nỞ đây chúng ta chia làm 2 job:\nbuild-and-push deploy Chúng ta sẽ tìm hiểu chi tiết hơn về từng job.\nbuild-and-push runs-on: ubuntu-22.04, ở đây ta định nghĩa server sẽ chạy job này trên nền tảng nào, ở đây chúng ta chọn ubuntu-22.04 steps, ở đây ta sẽ định nghĩa những bước chạy cho job này: name: Checkout code, checkout để copy source code từ repository hiện tại vào server ubuntu-22.04 name: Login to Docker Hub, login vào tài khoản Dockerhub của chúng ta name: Build and Push Image to Docker Hub, ta sẽ tiến hành build image và push image lên trên Dockerhub của chúng ta docker build -t $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest .\nLệnh build image, chú ý dấu \u0026quot;.\u0026quot; có nghĩa là dùng chính Dockerfile trong thư mục hiện tại (ở đây là Github Repository của chúng ta) docker push $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest\nLệnh push image lên trên Dockerhub # Define all jobs, include two jobs are build-and-push and deploy\rjobs:\r# build-and-push job\rbuild-and-push:\r# Choosing the runner for jobs is ubuntu-22.04\rruns-on: ubuntu-22.04\rsteps:\r# Checkout Code to copy source code from Github Reporsitories to runner (ubuntu-22.04) in the GitHub Actions process.\r- name: Checkout code\ruses: actions/checkout@v2\r# Login to Docker Hub\r- name: Login to Docker Hub\rrun: docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD\r# Build and Push Image to Docker Hub\r- name: Build and Push Image to Docker Hub\rrun: |\rdocker build -t $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest . docker push $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest deploy needs: build-and-push, job này chỉ được chạy khi job build-and-push đã hoàn thành runs-on: ubuntu-22.04, ở đây ta định nghĩa server sẽ chạy job này trên nền tảng nào, ở đây chúng ta chọn ubuntu-22.04 steps, ở đây ta sẽ định nghĩa những bước chạy cho job này: name: Deploy to server, kéo image mới nhất về từ dockerhub và triển khai lên docker_server echo \u0026quot;$SSH_PRIVATE_KEY\u0026quot; \u0026gt; sshkey.pem\nDán SSH_PRIVATE_KEY đến file sshkey.pem chmod 400 sshkey.pem\nCấp quyền read đối với file sshkey.pem để chuẩn bị cho các bước ssh phía sau ssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST \u0026quot;docker pull $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest\u0026quot;\nLệnh ssh đến docker_server để chạy câu lệnh docker pull để kéo image mới nhất từ Dockerhub ssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST \u0026quot;docker rm -f react-app\u0026quot;\nLệnh ssh đến docker_server để chạy câu lệnh docker rm để xóa container react-app nếu nó đã tồn tại, để bước sau có thể chạy container mới ssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST \u0026quot;docker run -d -p 3000:3000 --name react-app $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest\u0026quot;\nLệnh ssh đến docker_server để chạy câu lệnh docker run để run container react-app ánh xạ vào host ở port (docker_server) 3000 với image mới nhất vừa được kéo về # deploy job\rdeploy:\r# deploy only run when build-and-push completed\rneeds: build-and-push\r# Choosing the runner for jobs is ubuntu-22.04\rruns-on: ubuntu-22.04\rsteps:\r- name: Deploy to server\rrun: |\r# Paste SSH_PRIVATE_KEY to sshkey.pem\recho \u0026#34;$SSH_PRIVATE_KEY\u0026#34; \u0026gt; sshkey.pem\r# Change mode read for sshkey.pem\rchmod 400 sshkey.pem\r# Pull image latest\rssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST \u0026#34;docker pull $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest\u0026#34;\r# Remove container react-app if existed\rssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST \u0026#34;docker rm -f react-app\u0026#34;\r# Run new container react-app on port 3000\rssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST \u0026#34;docker run -d -p 3000:3000 --name react-app $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest\u0026#34; Trong các câu lệnh SSH phía trên ta có options StrictHostKeyChecking=no mục đích để bỏ qua yêu cầu xác minh khóa máy chủ (host key checking) khi kết nối thông qua SSH từ các máy khách.\nCuối cùng, ta có một Workflow hoàn chỉnh. name: CI/CD\r# Trigger by push event on branch main\ron:\rpush:\rbranches:\r- main\r# Define all environment variables (Previously defined in secrets and variables)\renv:\rDOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}\rDOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}\rDOCKER_HUB_REPOSITORIES: react-app-github-actions\rSSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}\rSSH_USERNAME: ${{ secrets.SSH_USERNAME }}\rSSH_HOST: ${{ secrets.SSH_HOST }}\r# Define all jobs, include two jobs are build-and-push and deploy\rjobs:\r# build-and-push job\rbuild-and-push:\r# Choosing the runner for jobs is ubuntu-22.04\rruns-on: ubuntu-22.04\rsteps:\r# Checkout Code to copy source code from Github Reporsitories to runner (ubuntu-22.04) in the GitHub Actions process.\r- name: Checkout code\ruses: actions/checkout@v2\r# Login to Docker Hub\r- name: Login to Docker Hub\rrun: docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD\r# Build and Push Image to Docker Hub\r- name: Build and Push Image to Docker Hub\rrun: |\rdocker build -t $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest . docker push $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest\r# deploy job\rdeploy:\r# deploy only run when build-and-push completed\rneeds: build-and-push\r# Choosing the runner for jobs is ubuntu-22.04\rruns-on: ubuntu-22.04\rsteps:\r- name: Deploy to server\rrun: |\r# Paste SSH_PRIVATE_KEY to sshkey.pem\recho \u0026#34;$SSH_PRIVATE_KEY\u0026#34; \u0026gt; sshkey.pem\r# Change mode read for sshkey.pem\rchmod 400 sshkey.pem\r# Pull image latest\rssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST \u0026#34;docker pull $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest\u0026#34;\r# Remove container react-app if existed\rssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST \u0026#34;docker rm -f react-app\u0026#34;\r# Run new container react-app on port 3000\rssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST \u0026#34;docker run -d -p 3000:3000 --name react-app $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest\u0026#34; Sau khi đã có Workflow hoàn chỉnh, hãy nhất Commit Changes Cửa sổ Commit changes hiện ra\nTại mục Commit message, nhập Create main.yml for Github Actions Workflows Chọn Commit directly to the main branch Chọn Commit changes Vậy là bạn đã hoàn thành bước Tạo Workflow. Tiếp theo chúng ta sẽ tiếp tục đến bước Kiểm tra quá trình CI/CD của mình "
+},
+{
+	"uri": "/vi/3-githubrepo/3.3-clone/",
+	"title": "Clone Repository",
+	"tags": [],
+	"description": "",
+	"content": "Clone Repository Clone là một tính năng gần giống như Fork, Clone cho phép tạo ra bản sao dữ liệu hoàn chỉnh của kho đang được lưu chứa trên máy chủ và tất cả lịch sử trên kho. Với Clone, bạn có thể phục hồi bất kỳ bước nào dù đã commit.\nTa sẽ tiến hành clone repository của chúng ta đã thực hiện ở bước 3.1 bằng cú pháp:\ngit clone https://\u0026lt;your_token\u0026gt;@github.com/\u0026lt;your_github_user_name\u0026gt;/\u0026lt;your_repository_name\u0026gt;.git Với:\n\u0026lt;your_token\u0026gt; : Là token bạn đã lưu lại ở bước 3.2 \u0026lt;your_github_user_name\u0026gt; : Là tên tài khoản github của bạn \u0026lt;your_repository_name\u0026gt; : Là tên repository bạn đã thay đổi khi Fork Repository ở bước 3.1 Trước khi thực hiện những bước dưới đây, hãy đảm bảo rằng máy tính bạn đã cài Git bash và Visual Studio Code\nNếu không bạn có thể download tại đây:\nDownload Git bash\nDownload Visual Studio Code\nTrình tự thực hiện Chọn một thư mục bạn muốn lưu trữ Github Repository của mình Click chuột phải tại vùng trống của thư mục, chọn Git Bash Here Giao diện Git Bash hiện ra Tại giao diện này, ta thực hiện câu lệnh git clone bằng cú pháp đã nêu ra phía trên. Hãy thay đổi các thông tin cho phù hợp với bạn git clone https://\u0026lt;your_token\u0026gt;@github.com/\u0026lt;your_github_user_name\u0026gt;/\u0026lt;your_repository_name\u0026gt;.git Tiếp tục thực hiện change directory bằng lệnh cd vào thư mục git mình mới clone về. cd \u0026lt;your_repository_name\u0026gt; Mở thư mục hiện tại bằng Visual Studio Code code . Tại giao diện Visual Studio Code vừa được mở Tại vùng trống của Explorer, ta nhấn chuột phải chọn Open in Intergrated Terminal Tại giao diện Terminal vừa được mở Nhấn dấu mũi tên xuống chọn Git Bash hoặc bạn có thể chọn CLI nào khác phù hợp với sở thích của bạn Vậy chúng ta bạn đã hoàn thành Clone Repository của mình vào chuẩn bị môi trường làm việc cho những bước tiếp theo.\n"
+},
+{
+	"uri": "/vi/4-githubactions/4.3-check/",
+	"title": "Kiểm tra quá trình CI/CD",
+	"tags": [],
+	"description": "",
+	"content": "Trình tự thực hiện Từ giao diện Repository react-app-github-actions của bạn trên Github Chọn Actions, chúng ta sẽ được chuyển đến giao diện Actions\nTại mục All workflows, ta thấy 1 workflow đang run Create main.yml for Github Actions Workflows, đây là commit message mà chúng ta đã thực hiện trong bước 4.2 Chọn Create main.yml for Github Actions Workflows, chúng ta sẽ xem được hơn chi tiết của Workflow này, gồm 2 job build and push và deploy Chúng ta cũng có thể chọn build and push để xem chi tiết hơn của job này Sau khi job build and push đã hoàn thành, ta có thể login vào Dockerhub để kiểm tra, lúc này ta thấy Repository react-app-github-actions vừa xuất hiện Quay trở lại giao diện Actions, khi workflow Create main.yml for Github Actions Workflows hoàn thành Mở trình duyện web mới, truy cập đường link theo cú pháp http://\u0026lt;your_ip_address_docker_server\u0026gt;:3000, rồi xem kết quả\nVới \u0026lt;your_ip_address_docker_server\u0026gt; là địa chỉ IP Publish của docker_server Như thế là ứng dụng của bạn đã được deploy thành công lên docker_server\nVậy là chúng ta đã hoàn thành bước Kiểm tra quá trình CI/CD. Tiếp theo chúng ta sẽ tiến hành cập nhật code, sau đó kiểm tra lại quá trình CI/CD "
+},
+{
+	"uri": "/vi/2-preparation/2.3-createigw/",
+	"title": "Tạo Internet Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Trình tự thực hiện Trong giao diện VPC Chọn Internet Gateways Chọn Create internet gateway Tại trang Create internet gateway Tại mục Name tag, nhập Lab-IGW Chọn Create internet gateway Sau khi tạo Lab-IGW thành công Chọn Attach to VPC Tại trang Attach to VPC Tại mục Available VPCs, chọn Lab-VPC Chọn Attach internet gateway Hoàn thành Attach VPC Lab-VPC vào Internet Gateway Lab-IGW "
+},
+{
+	"uri": "/vi/3-githubrepo/",
+	"title": "Thao tác với Github Repository",
+	"tags": [],
+	"description": "",
+	"content": "\nTrong bước này, chúng ta sẽ thực hiện các thao tác với Github Repository.\nNội dung 3.1 Fork Repository 3.2 Tạo Access Token 3.3 Clone Repository 3.4 Tạo Dockerfile 3.5 Push Repository\n"
+},
+{
+	"uri": "/vi/4-githubactions/",
+	"title": " Thao tác với Github Actions",
+	"tags": [],
+	"description": "",
+	"content": "\nTrong phần này chúng ta sẽ tiến hành lần lượt các bước để tạo một quy trình CI/CD hoàn chỉnh trong Github Actions.\nNội dung: 4.1 Tạo Secrets 4.2 Tạo Workflows 4.3 Kiểm tra quá trình CI/CD "
+},
+{
+	"uri": "/vi/3-githubrepo/3.4-createdockerfile/",
+	"title": "Tạo Dockerfile",
+	"tags": [],
+	"description": "",
+	"content": "Dockerfile Dockerfile là một file dạng text không có phần đuôi mở rộng, chứa tất cả các lệnh mà người dùng định nghĩa về một môi trường thực thi phần mềm.\nTừ những câu lệnh đó, Docker sẽ xây dựng ra image (thường có dung lượng nhỏ từ vài MB đến lớn vài GB).\nTrình tự thực hiện Tại giao diện Terminal trong Visual Studio Code đã được chuẩn bị ở bước 3.3 Thực hiện câu lệnh touch để tạo Dockerfile touch Dockerfile Ta sẽ thấy Dockerfile xuất hiện phía bên Explorer Chúng ta sẽ tiến hành tìm hiểu từng bước để tạo Dockerfile Chọn base image là node:16-alpine, do alpine là base image có dung lượng nhỏ nhất, hiệu suất cao trong việc khởi chạy và chạy ứng dụng, và có cài đặt sẵn nodejs v16 # Select base image node:16-alpine\rFROM node:16-alpine Chọn user node làm user mặc định # Set user node\rUSER node Taọ một đường dẫn mới /home/node/app # Create directory /home/node/app\rRUN mkdir /home/node/app Cài đặt đường dẫn làm việc mặc định là /home/node/app, khi chúng ta thực hiện câu lệnh docker exec vào container thì mặc định home sẽ là đường dẫn này.\nCác lệnh Docker phía sau lệnh WORKDIR sẽ đều thực hiện trong đường dẫn /home/node/app # Set working directory /home/node/app\rWORKDIR /home/node/app Sao chép tất cả các tài nguyên ở thư mục làm việc hiện tại sang thư mục /home/node/app của container\nvà thay đổi quyền sở hữu các tài nguyên này cho user node, group node # Copy and change the owner and group all files from current directory to /home/node/app\rCOPY --chown=node:node . . Chạy lệnh npm install để cài đặt tất cả các dependences cần thiết cho ứng dụng đã được định nghĩa trong file package.json # Install all dependences for App\rRUN npm install Expose port cho container để ánh xạ port từ máy host khi chạy ứng dụng sau này # Expose port for App\rEXPOSE 3000 Chạy lệnh npm start mỗi khi run container # Run the command \u0026#34;npm start\u0026#34; every time run App\rCMD [\u0026#34;npm\u0026#34;, \u0026#34;start\u0026#34;] Cuối cùng, ta có một Dockerfile hoàn chỉnh. # Select base image node:16-alpine\rFROM node:16-alpine\r# Set user node\rUSER node\r# Create directory /home/node/app\rRUN mkdir /home/node/app\r# Set working directory /home/node/app\rWORKDIR /home/node/app\r# Copy and change the owner and group all files from current directory to /home/node/app\rCOPY --chown=node:node . .\r# Install all dependences for App\rRUN npm install\r# Expose port for App\rEXPOSE 3000\r# Run the command \u0026#34;npm start\u0026#34; every time run App\rCMD [\u0026#34;npm\u0026#34;, \u0026#34;start\u0026#34;] Save lại nội dung Dockerfile Vậy là bạn đã hoàn thành bước Tạo Dockerfile cho dự án của mình.\nTiếp theo sẽ đến bước Push những thay đổi (Trong trường hợp này là thêm Dockerfile) lên Repository của chúng ta. "
+},
+{
+	"uri": "/vi/2-preparation/2.4-creatertb/",
+	"title": "Tạo Route Table",
+	"tags": [],
+	"description": "",
+	"content": "Trình tự thực hiện Trong giao diện VPC Chọn Route Tables Chọn Create route table Tại trang Create route table Tại mục Name, nhập Lab-RTB Tại mục VPC, chọn Lab-VPC Chọn Create route table Tại trang Lab-RTB vừa được tạo Chọn tab Subnet associations Chọn Edit subnet associations để tiến hành associate Lab-RTB chúng ta vừa tạo vào Publish Subnet Lab-PUS đã được tạo ở bước 2.2 Tại trang Edit subnet associations Chọn Lab-PUS Chọn Save associations Quay lại trang thông tin của Lab-RTB Chọn tab Routes Chọn Edit routes Tại trang Edit routes Chọn Add route Tại mục Destination, nhập 0.0.0.0/0 Tại mục Target, chọn Internet Gateway, sau đó chọn Lab-IGW mà bạn đã tạo ở bưới 2.3 Chọn Save changes Hoàn thành tạo Route Table Lab-RTB và kiểm tra thông tin route đi internet đã được trỏ đến Internet Gateway Lab-IGW "
+},
+{
+	"uri": "/vi/5-updatecheck/",
+	"title": "Cập Nhật và Kiểm Tra",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, để hiểu hơn về quá trình CI/CD sẽ diễn ra như thế nào, chúng ta sẽ tiến hành cập nhật code, push code, sau đó kiểm tra lại quá trình CI/CD.\nNội dung: 5.1 Cập nhật Code 5.2 Kiểm tra lại quá trình CI/CD "
+},
+{
+	"uri": "/vi/3-githubrepo/3.5-push/",
+	"title": "Push Repository",
+	"tags": [],
+	"description": "",
+	"content": "Push Repository Push là một tính năng trong Github dùng để cập nhật tất cả các thay đổi tại máy local lên kho lưu trữ từ xa (remote repository).\nTrình tự thực hiện Tại giao diện Terminal trong Visual Studio Code Thực hiện câu lệnh git add . để lưu tất cả các thay đổi của bạn vào vùng chờ (staging area) trong Git git add . Thực hiện câu lệnh git commit -m \u0026quot;Add Dockerfile\u0026quot;, để tạo một lần xác nhận (commit) để lưu trữ những thay đổi sau khi thực hiện lệnh git add . vào lịch sử của dự án với commit massage là Add Dockerfile git commit -m \u0026#34;Add Dockerfile\u0026#34; Thực hiện câu lệnh git push để đồng bộ hóa những thay đổi đã được xác nhận ở 2 bước git add . và git commit -m \u0026quot;Dockerfile\u0026quot; lên kho lưu trữ từ xa (remote repository) git push Tại giao diện Repository react-app-github-actions của bạn trên Github Ta có thể thấy Dockerfile vừa được thêm vào Repository của chúng ta với commit message Add Dockerfile Vậy đã chúng ta đã hoàn thành bước Push Repository\n"
+},
+{
+	"uri": "/vi/2-preparation/2.5-createsg/",
+	"title": "Tạo Security Group",
+	"tags": [],
+	"description": "",
+	"content": "Trình tự thực hiện Trong giao diện VPC Chọn Security Group Chọn Create security group Tại mục Security group name, nhập Lab-SG Tại mục Description, nhập Allow SSH, All ICPM-IPv4, TCP 3000 for Docker Server Tại mục VPC, click dấu X để chọn Lab-VPC Trong phần Inbound rule, chọn Add rule để lần lượt thêm 3 Inbound theo bảng dưới đây Type Protocol Port range Source SSH TCP 22 Anywhere-IPv4, 0.0.0.0/0 All ICMP - IPv4 ICMP All Anywhere-IPv4, 0.0.0.0/0 Custom TCP TCP 3000 Anywhere-IPv4, 0.0.0.0/0 Inbound rule cho SSH: Chọn Add rule Tại mục Type chọn SSH, Source chọn Anywhere (0.0.0.0/0) Inbound rule cho Ping: Chọn Add rule Tại mục Type chọn All ICMP - IPv4, Source chọn Anywhere (0.0.0.0/0) Inbound rule cho App: Chọn Add rule Tại mục Type chọn Custom TCP, Port nhập 3000, Source chọn Anywhere (0.0.0.0/0) Giữ nguyên Outbound rule\nChọn Create security group\nHoàn thành tạo Security Group Lab-SG "
+},
+{
+	"uri": "/vi/6-cleanup/",
+	"title": "Dọn Dẹp Tài Nguyên",
+	"tags": [],
+	"description": "",
+	"content": "Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng ta đã tạo trong bài thực hành này.\nXóa EC2 instance Truy cập giao diện quản trị dịch vụ EC2\nChọn Instances Chọn instance docker_server Chọn Instance state Chọn Terminate instance, sau đó chọn Terminate để xác nhận Xóa VPC Truy cập vào giao diện quản trị dịch vụ VPC\nChọn Your VPCs Chọn Lab-VPC Chọn Actions Chọn Delete VPC Tại ô confirm, nhập delete để xác nhận Sau đó chọn Delete để thực hiện xóa Lab VPC và các tài nguyên liên quan "
+},
+{
+	"uri": "/vi/2-preparation/2.6-createec2/",
+	"title": "Tạo EC2 Instance",
+	"tags": [],
+	"description": "",
+	"content": "Trình tự thực hiện Truy cập giao diện quản trị dịch vụ EC2 Chọn Instances Chọn Launch instances Tại mục Name, nhập docker_server Tại mục Amazon Machine Image (AMI), chọn Amazon Linux 2 AMI Tại mục Instance type, chọn Instance type t2.micro Tại mục Key pair (login), chọn Create new key pair Tại trang create new key pair: Tại mục key pair name, nhập aws_keypair Tại mục key pair type, chọn RSA Tại mục private key file format chọn .pem Sau đó chọn Create key pair và lưu lại file aws_keypair.pem trên máy tính của bạn để sử dụng cho dịch vụ SSH ở những bước kế tiếp Tại mục Network settings chọn Edit Tại mục VPC, chọn Lab-VPC Tại mục Subnet, chọn Lab-PUS Tại mục Auto-assign Public IP, chọn Enable, nếu không Enable thì bạn có thể đã bỏ qua Enable auto-assign public IPv4 address ở bước 2.2 Tại mục Firewall (security groups), chọn Select existing security group, và chọn Lab-SG Kiểm tra lại thông tin và nhấn Launch instance Đợi khoảng 3-5 phút ta truy cập lại giao diện quản trị dịch vụ EC2 Chọn Instance Chọn docker_server Tại tab Details ta lưu lại thông tin địa chỉ IP Publish của EC2 Instance tại mục Puclish IPv4 address để chuẩn bị thông tin cho những bước kế tiếp "
+},
+{
+	"uri": "/vi/2-preparation/2.7-installdocker/",
+	"title": "Cài đặt Docker",
+	"tags": [],
+	"description": "",
+	"content": "Trình tự thực hiện Trước tiên chúng ta cần SSH vào Server EC2 mà chúng ta đã tạo ở bước 2.6 Ở đây mình dùng MobaXterm. Bạn có thể xem chi tiết hơn Cách kết nối EC2 Instance bằng MobaXterm Chọn Session Chọn SSH Tại mục Remote host, nhập IP Publish của EC2 Instance đã được lưu lại ở bước 2.6 Chọn Specify username, nhập ec2-user Chọn Advange SSH Settings Chọn use private key, sau đó truy xuất đường dẫn đến file aws_keypair.pem đã lưu ở bước 2.6 Chọn OK ec2-user là user mặc định của các Linux Instance được tạo từ các Amazon Machine Image (AMI)\nKết nối thành công như hình bên dưới Tiếp theo chúng ta tiến hành thực hiện các câu lệnh để cài đặt Docker Cập nhật các bản cập nhật đang chờ xử lý: sudo yum update -y Cài đặt docker sudo yum install docker -y Thêm ec2-user vào group docker sudo usermod -aG docker ec2-user Kích hoạt docker service chạy khi khởi động sudo systemctl enable docker.service Chạy docker service sudo systemctl start docker.service Kiểm tra trạng thái của docker service sudo systemctl status docker.service Chúng ta thấy docker service hiện đang running, như vậy chúng ta đã hoàn thành việc Cài đặt Docker trên EC2 Instance "
+},
+{
+	"uri": "/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
