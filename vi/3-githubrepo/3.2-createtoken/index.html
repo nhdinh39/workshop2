@@ -12,21 +12,21 @@
     <title>Tạo Access Token :: CI/CD với Github Actions</title>
 
     
-    <link href="../../../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../../../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../../../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1691333868" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1691333868" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1691333868" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1691333868" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1691333868" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1691333868" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1691333868" rel="stylesheet">
+    <link href="../../../css/theme.css?1691333868" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1691333868" rel="stylesheet">
     
-    <link href="../../../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../../../css/theme-workshop.css?1691333868" rel="stylesheet">
     
     
 
-    <script src="../../../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../../../js/jquery-3.3.1.min.js?1691333868"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../../../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../../../js/lunr.min.js?1691333868"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1691333868"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="../../../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../../../js/search.js?1691333868"></script>
 
     
   </div>
@@ -947,9 +947,9 @@
 <li>Từ giao diện trang chủ của bạn trên Github</li>
 </ol>
 <ul>
-<li>Nhấn vào biểu tượng avatar user bên góc trên bên phải, chọn <strong>Settings</strong></li>
+<li>Nhấn vào biểu tượng avatar user bên góc trên bên phải, chọn <strong>Settings</strong>
+<img src="../../../images/3-GithubRepo/3.2/3.2.1.png" alt="TOKEN"></li>
 </ul>
-<p><img src="../../../images/3-GithubRepo/3.2/3.2.1.png" alt="TOKEN"></p>
 <ol start="2">
 <li>Chúng ta sẽ được đưa đến trang  <strong>Settings</strong></li>
 </ol>
@@ -957,22 +957,22 @@
 <li>Cuộn chuột xuống dưới cùng, chọn <strong>Developer Settings</strong></li>
 <li>Tại trang <strong>Developer Settings</strong>, cuộn chuột xuống dưới cùng, tại mục <strong>Personal access tokens</strong>, chọn <strong>Tokens (classic)</strong></li>
 <li>Tại mục <strong>Personal access tokens (classic)</strong>, chọn <strong>Generate new token</strong>, sau đó chọn <strong>General new tokens (classic)</strong> <br>
-<em>(Bước này có thể Github sẽ bắt bạn cung cấp mật khẩu đăng nhập)</em></li>
+<em>(Bước này có thể Github sẽ bắt bạn cung cấp mật khẩu đăng nhập)</em>
+<img src="../../../images/3-GithubRepo/3.2/3.2.2.png" alt="TOKEN"></li>
 </ul>
-<p><img src="../../../images/3-GithubRepo/3.2/3.2.2.png" alt="TOKEN"></p>
 <ol start="3">
-<li>Chúng ta sẽ được đưa đến trang <strong>New persional access tokens (classic)</strong></li>
+<li>Chúng ta sẽ được chuyển đến trang <strong>New persional access tokens (classic)</strong></li>
 </ol>
 <ul>
 <li>Tại mục <strong>Note</strong>, nhập <strong>github_token</strong></li>
-<li>Tại mục <strong>Select scopes</strong>, click chọn 2 mục là <strong>repo</strong> và <strong>workflow</strong></li>
-<li>Cuộn chuột xuống dưới cùng, chọn <strong>Generate token</strong></li>
+<li>Tại mục <strong>Select scopes</strong>, chọn 2 mục là <strong>repo</strong> và <strong>workflow</strong></li>
+<li>Cuộn chuột xuống dưới cùng, chọn <strong>Generate token</strong>
+<img src="../../../images/3-GithubRepo/3.2/3.2.3.png" alt="TOKEN"></li>
 </ul>
-<p><img src="../../../images/3-GithubRepo/3.2/3.2.3.png" alt="TOKEN"></p>
 <ol start="4">
-<li>Chúng ta sẽ được cung cấp một dãy token mới, hãy lưu lại token này để dùng cho những bước tiếp theo</li>
+<li>Chúng ta sẽ được cung cấp một token mới, hãy lưu lại token này để dùng cho những bước tiếp theo
+<img src="../../../images/3-GithubRepo/3.2/3.2.4.png" alt="TOKEN"></li>
 </ol>
-<p><img src="../../../images/3-GithubRepo/3.2/3.2.4.png" alt="TOKEN"></p>
 
 <div class="notices warning" ><p><strong>token</strong> này sau khi tạo chỉ xuất hiện 1 lần duy nhất, khi reload lại trang thì sẽ mất, nên lưu giữ cẩn thận</p>
 </div>
@@ -1421,19 +1421,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1691074209"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../../../js/jquery.sticky.js?1691074209"></script>
-    <script src="../../../js/featherlight.min.js?1691074209"></script>
-    <script src="../../../js/highlight.pack.js?1691074209"></script>
+    <script src="../../../js/clipboard.min.js?1691333868"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1691333868"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1691333868"></script>
+    <script src="../../../js/jquery.sticky.js?1691333868"></script>
+    <script src="../../../js/featherlight.min.js?1691333868"></script>
+    <script src="../../../js/highlight.pack.js?1691333868"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../../../js/learn.js?1691074209"></script>
-    <script src="../../../js/hugo-learn.js?1691074209"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1691333868"></script>
+    <script src="../../../js/learn.js?1691333868"></script>
+    <script src="../../../js/hugo-learn.js?1691333868"></script>
 
-    <link href="../../../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1691074209"></script>
+    <link href="../../../mermaid/mermaid.css?1691333868" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1691333868"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

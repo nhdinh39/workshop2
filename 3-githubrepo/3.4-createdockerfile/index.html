@@ -12,21 +12,21 @@
     <title>Create Dockerfile :: CI/CD with Github Actions</title>
 
     
-    <link href="../../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../../css/nucleus.css?1691333867" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/hybrid.css?1691333867" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1691333867" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1691333867" rel="stylesheet">
+    <link href="../../css/theme.css?1691333867" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1691333867" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1691333867" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1691333867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1691333867"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1691333867"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../../js/search.js?1691333867"></script>
 
     
   </div>
@@ -941,67 +941,66 @@
 
 
 	<h4 id="dockerfile">Dockerfile</h4>
-<p><strong>Dockerfile</strong> là một file dạng text không có phần đuôi mở rộng, chứa tất cả các lệnh mà người dùng định nghĩa về một môi trường thực thi phần mềm.<br>
-Từ những câu lệnh đó, <strong>Docker</strong> sẽ xây dựng ra image (thường có dung lượng nhỏ từ vài MB đến lớn vài GB).</p>
-<h4 id="trình-tự-thực-hiện">Trình tự thực hiện</h4>
+<p><strong>Dockerfile</strong> is a text file without an extension that contains all the commands that a user defines for an executable software environment.<br>
+From these commands, <strong>Docker</strong> will build an image (typically ranging in size from a few MBs to several GBs).</p>
+<h4 id="execution-sequence">Execution sequence</h4>
 <ol>
-<li>Tại giao diện Terminal trong <strong>Visual Studio Code</strong> đã được chuẩn bị ở bước <strong>3.3</strong></li>
+<li>In the Terminal interface within <strong>Visual Studio Code</strong>, which was prepared in step <strong>3.3</strong></li>
 </ol>
 <ul>
-<li>Thực hiện câu lệnh touch để tạo <strong>Dockerfile</strong></li>
+<li>Execute the command <code>touch Dockerfile</code> to create <strong>Dockerfile</strong></li>
 </ul>
 <pre tabindex="0"><code>touch Dockerfile
 </code></pre><ul>
-<li>Ta sẽ thấy <strong>Dockerfile</strong> xuất hiện phía bên Explorer
+<li>You will see the <strong>Dockerfile</strong> appear in the Explorer section
 <img src="../../images/3-GithubRepo/3.4/3.4.1.png" alt="DOCKER"></li>
 </ul>
 <ol start="2">
-<li>Chúng ta sẽ tiến hành tìm hiểu từng bước để tạo <strong>Dockerfile</strong></li>
+<li>We will proceed to understand each step to create the <strong>Dockerfile</strong></li>
 </ol>
 <ul>
-<li>Chọn base image là <em>node:16-alpine</em>, do alpine là base image có dung lượng nhỏ nhất, hiệu suất cao trong việc khởi chạy và chạy ứng dụng, và có cài đặt sẵn nodejs v16</li>
+<li>Choose the base image as <em>node:16-alpine</em>. Alpine is a base image with the smallest size, high performance for launching and running applications, and comes with Node.js v16 pre-installed</li>
 </ul>
 <pre tabindex="0"><code># Select base image node:16-alpine
 FROM node:16-alpine
 </code></pre><ul>
-<li>Chọn user <em>node</em> làm user mặc định</li>
+<li>Select user <em>node</em> as default user</li>
 </ul>
 <pre tabindex="0"><code># Set user node
 USER node
 </code></pre><ul>
-<li>Taọ một đường dẫn mới <em>/home/node/app</em></li>
+<li>Create a new path <em>/home/node/app</em></li>
 </ul>
 <pre tabindex="0"><code># Create directory /home/node/app
 RUN mkdir /home/node/app
 </code></pre><ul>
-<li>Cài đặt đường dẫn làm việc mặc định là <em>/home/node/app</em>, khi chúng ta thực hiện câu lệnh <code>docker exec</code> vào container thì mặc định home sẽ là đường dẫn này.<br>
-Các lệnh Docker phía sau lệnh <strong>WORKDIR</strong> sẽ đều thực hiện trong đường dẫn <em>/home/node/app</em></li>
+<li>Set the default working directory to <em>/home/node/app</em>. When we execute the <code>docker exec</code> command inside the container, the default home directory will be this path.<br>
+Commands after the <strong>WORKDIR</strong> instruction in Docker will all be executed within the path <em>/home/node/app</em></li>
 </ul>
 <pre tabindex="0"><code># Set working directory /home/node/app
 WORKDIR /home/node/app
 </code></pre><ul>
-<li>Sao chép tất cả các tài nguyên ở thư mục làm việc hiện tại sang thư mục <em>/home/node/app</em> của container<br>
-và thay đổi quyền sở hữu các tài nguyên này cho <em>user node</em>, <em>group node</em></li>
+<li>Copy all resources from the current working directory to the <em>/home/node/app</em> directory of the container and change the ownership of these resources to <em>user node</em> and <em>group node</em></li>
 </ul>
 <pre tabindex="0"><code># Copy and change the owner and group all files from current directory to /home/node/app
 COPY --chown=node:node . .
 </code></pre><ul>
-<li>Chạy lệnh <code>npm install</code> để cài đặt tất cả các dependences cần thiết cho ứng dụng đã được định nghĩa trong file <em>package.json</em></li>
+<li>Run the <code>npm install</code> command to install all the necessary dependencies for the application defined in the <em>package.json</em> file</li>
 </ul>
 <pre tabindex="0"><code># Install all dependences for App
 RUN npm install
 </code></pre><ul>
-<li>Expose port cho container để ánh xạ port từ máy host khi chạy ứng dụng sau này</li>
+<li>Expose a port for the container to map ports from the host machine when running the application in the future</li>
 </ul>
 <pre tabindex="0"><code># Expose port for App
 EXPOSE 3000
 </code></pre><ul>
-<li>Chạy lệnh <code>npm start</code> mỗi khi run container</li>
+<li>Run <code>npm start</code> command each time the container is run</li>
 </ul>
 <pre tabindex="0"><code># Run the command &#34;npm start&#34; every time run App
 CMD [&#34;npm&#34;, &#34;start&#34;]
 </code></pre><hr>
-<h4 id="cuối-cùng-ta-có-một-dockerfile-hoàn-chỉnh">Cuối cùng, ta có một Dockerfile hoàn chỉnh.</h4>
+<h4 id="finally-we-have-a-complete-dockerfile">Finally, we have a complete Dockerfile</h4>
 <pre tabindex="0"><code># Select base image node:16-alpine
 FROM node:16-alpine
 
@@ -1026,12 +1025,12 @@ EXPOSE 3000
 # Run the command &#34;npm start&#34; every time run App
 CMD [&#34;npm&#34;, &#34;start&#34;]
 </code></pre><ol start="3">
-<li>Save lại nội dung <strong>Dockerfile</strong></li>
+<li>Save <strong>Dockerfile</strong></li>
 </ol>
 <p><img src="../../images/3-GithubRepo/3.4/3.4.2.png" alt="DOCKER"></p>
 <ol start="4">
-<li>Vậy là bạn đã hoàn thành bước <strong>Tạo Dockerfile</strong> cho dự án của mình.<br>
-Tiếp theo sẽ đến bước <strong>Push</strong> những thay đổi (Trong trường hợp này là <strong>thêm Dockerfile</strong>) lên Repository của chúng ta.</li>
+<li>You have completed the <strong>Create Dockerfile</strong> step for your project.<br>
+Next will be the Push step to upload the changes (in this case, the <strong>Add Dockerfile</strong>) to our repository</li>
 </ol>
 
 
@@ -1477,19 +1476,19 @@ Tiếp theo sẽ đến bước <strong>Push</strong> những thay đổi (Trong
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../../js/jquery.sticky.js?1691074209"></script>
-    <script src="../../js/featherlight.min.js?1691074209"></script>
-    <script src="../../js/highlight.pack.js?1691074209"></script>
+    <script src="../../js/clipboard.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1691333867"></script>
+    <script src="../../js/jquery.sticky.js?1691333867"></script>
+    <script src="../../js/featherlight.min.js?1691333867"></script>
+    <script src="../../js/highlight.pack.js?1691333867"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../../js/learn.js?1691074209"></script>
-    <script src="../../js/hugo-learn.js?1691074209"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1691333867"></script>
+    <script src="../../js/learn.js?1691333867"></script>
+    <script src="../../js/hugo-learn.js?1691333867"></script>
 
-    <link href="../../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1691074209"></script>
+    <link href="../../mermaid/mermaid.css?1691333867" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1691333867"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

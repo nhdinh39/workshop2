@@ -12,21 +12,21 @@
     <title>Update Code :: CI/CD with Github Actions</title>
 
     
-    <link href="../../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../../css/nucleus.css?1691333867" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/hybrid.css?1691333867" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1691333867" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1691333867" rel="stylesheet">
+    <link href="../../css/theme.css?1691333867" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1691333867" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1691333867" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1691333867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1691333867"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1691333867"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../../js/search.js?1691333867"></script>
 
     
   </div>
@@ -940,36 +940,36 @@
 
 
 
-	<h4 id="trình-tự-thực-hiện">Trình tự thực hiện</h4>
+	<h4 id="execution-sequence">Execution sequence</h4>
 <ol>
-<li>Tại giao diện <strong>Terminal</strong> trong <strong>Visual Studio Code</strong></li>
+<li>In the <strong>Terminal</strong> interface within <strong>Visual Studio Code</strong></li>
 </ol>
 <ul>
-<li>Thực hiện câu lệnh <code>git pull</code> để cập nhật tất cả những thay đổi mới nhất của Github Repository của chúng ta về máy local</li>
+<li>Execute the command <code>git pull</code> to update all the latest changes from your Github Repository to your local machine</li>
 </ul>
 <pre tabindex="0"><code>git pull
 </code></pre><p><img src="../../images/5-UpdateCheck/5.1/5.1.1.png" alt="UPDATE"></p>
 <ol start="2">
-<li>Tại thư mục <strong>src</strong>, chọn <strong>App.js</strong>, ta thực hiện thay đổi</li>
+<li>In the <strong>src</strong> directory, select <strong>App.js</strong>, and then make changes</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;Welcome to React-Simple-App&lt;<span style="color:#f92672">br</span> /&gt;
-</span></span></code></pre></div><p>Thành</p>
+</span></span></code></pre></div><p>To</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">{{color:</span> <span style="color:#960050;background-color:#1e0010">&#34;#</span><span style="color:#a6e22e">32ff7e</span><span style="color:#960050;background-color:#1e0010">&#34;}}</span>&gt;Welcome to React-Simple-App&lt;<span style="color:#f92672">br</span> /&gt;
 </span></span></code></pre></div>
-<div class="notices info" ><p>Mục đích là thay đổi màu của Text trong App từ <em>trắng</em> sang <em>xanh lá</em>. Bạn có thể hiểu rõ hơn trong bước kiểm tra tiếp theo</p>
+<div class="notices info" ><p>The purpose is to change the color of the text in the App from <strong>white</strong> to <strong>green</strong>. You can understand this better in the next check step.</p>
 </div>
 
 <p><img src="../../images/5-UpdateCheck/5.1/5.1.2.png" alt="UPDATE"></p>
 <ol start="3">
-<li><strong>Save</strong> lại. Sau đó tiến hành <strong>push code</strong> lên Github Repository của chúng ta.<br>
-Bằng cách thực hiện lần lượt các câu lệnh phía dưới. Chức năng từng câu lệnh bạn có thể xem lại ở bước <strong>3.5</strong></li>
+<li><strong>Save</strong> the changes. Then proceed to <strong>push code</strong> to our Github Repository.<br>
+By executing the following commands step by step. You can refer to the function of each command in step <strong>3.5</strong></li>
 </ol>
 <pre tabindex="0"><code>git add .
 git commit -m &#34;Edit Text Color&#34;
 git push
 </code></pre><p><img src="../../images/5-UpdateCheck/5.1/5.1.3.png" alt="UPDATE"></p>
 <ol start="4">
-<li>Vậy là chúng ta đã thực hiện xong bước <strong>Cập Nhật Code</strong>. Tiếp theo chúng ta sẽ <strong>Kiểm tra lại quá trình CI/CD</strong></li>
+<li>Now we have completed <strong>Update Code</strong> step. Next, we will proceed to <strong>Check CI/CD Process Again</strong></li>
 </ol>
 
 
@@ -1412,19 +1412,19 @@ git push
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../../js/jquery.sticky.js?1691074209"></script>
-    <script src="../../js/featherlight.min.js?1691074209"></script>
-    <script src="../../js/highlight.pack.js?1691074209"></script>
+    <script src="../../js/clipboard.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1691333867"></script>
+    <script src="../../js/jquery.sticky.js?1691333867"></script>
+    <script src="../../js/featherlight.min.js?1691333867"></script>
+    <script src="../../js/highlight.pack.js?1691333867"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../../js/learn.js?1691074209"></script>
-    <script src="../../js/hugo-learn.js?1691074209"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1691333867"></script>
+    <script src="../../js/learn.js?1691333867"></script>
+    <script src="../../js/hugo-learn.js?1691333867"></script>
 
-    <link href="../../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1691074209"></script>
+    <link href="../../mermaid/mermaid.css?1691333867" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1691333867"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,21 +12,21 @@
     <title>Create Secrets :: CI/CD with Github Actions</title>
 
     
-    <link href="../../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../../css/nucleus.css?1691333867" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/hybrid.css?1691333867" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1691333867" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1691333867" rel="stylesheet">
+    <link href="../../css/theme.css?1691333867" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1691333867" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1691333867" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1691333867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1691333867"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1691333867"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../../js/search.js?1691333867"></script>
 
     
   </div>
@@ -941,117 +941,117 @@
 
 
 	<h4 id="secrets">Secrets</h4>
-<p><strong>Secrets</strong> là một tín năng trong Github Actions dùng để lưu trữ các loại xác thực, chúng ta có thể sử dụng các Secret này để làm các biến môi trường trong Workflow của quy trình CI/CD mà không làm lộ thông tin Secret của chúng ta.</p>
-<p>Trước khi thực hiện các bước sau, ta cần tổng hợp và chuẩn bị thông tin cho các Secret mà ta sẽ tạo trong bước này.</p>
+<p><strong>Secrets</strong> is a feature in Github Actions used to store various types of credentials. We can use these secrets as environment variables in the CI/CD workflow without exposing sensitive information.</p>
+<p>Before proceeding with the following steps, we need to gather and prepare information for the secrets we will create in this section.</p>
 <table>
 <thead>
 <tr>
 <th>Secret</th>
 <th>Content</th>
-<th>Detail</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>DOCKER_HUB_USERNAME</td>
 <td>&lt;your_dockerhub_username&gt;</td>
-<td>username tài khoản Dockerhub</td>
+<td>Dockerhub account username</td>
 </tr>
 <tr>
 <td>DOCKER_HUB_PASSWORD</td>
 <td>&lt;your_dockerhub_password&gt;</td>
-<td>password tài khoản Dockerhub</td>
+<td>Dockerhub account password</td>
 </tr>
 <tr>
 <td>SSH_PRIVATE_KEY</td>
 <td>&lt;your_ssh_private_key&gt;</td>
-<td>Nội dung trong file aws_kepair.pem</td>
+<td>Contents from the aws_keypair.pem file</td>
 </tr>
 <tr>
 <td>SSH_USERNAME</td>
 <td>ec2-user</td>
-<td>User mặc định để SSH vào docker_server</td>
+<td>Default user for SSH into docker_server</td>
 </tr>
 <tr>
 <td>SSH_HOST</td>
 <td>&lt;your_ip_address_docker_server&gt;</td>
-<td>Địa chỉ IP Publish của docker_server</td>
+<td>IP Address of the docker_server</td>
 </tr>
 </tbody>
 </table>
 
-<div class="notices info" ><p><strong>ec2-user</strong> này user mặc định của các Linux Instance được tạo từ Amazon Machine Image (AMI)</p>
+<div class="notices info" ><p><strong>ec2-user</strong> is the default user for Linux Instances created from Amazon Machine Images (AMIs).</p>
 </div>
 
-<h4 id="trình-tự-thực-hiện">Trình tự thực hiện</h4>
+<h4 id="execution-sequence">Execution sequence</h4>
 <ol>
-<li>Từ giao diện Repository <strong>react-app-github-actions</strong> của bạn trên Github</li>
+<li>From the interface of your <strong>react-app-github-actions</strong> repository on Github</li>
 </ol>
 <ul>
-<li>Chọn <strong>Setting</strong>, chúng ta sẽ được chuyển đến trang <strong>Settings</strong></li>
-<li>Tại mục <strong>Secrets and variables</strong>, chọn <strong>Actions</strong></li>
-<li>Chọn <strong>New repository secrets</strong>
+<li>Select <strong>Settings</strong>, and you will be directed to the <strong>Settings</strong> page</li>
+<li>In the <strong>Secrets and variables</strong> field, select <strong>Actions</strong></li>
+<li>Select <strong>New repository secrets</strong>
 <img src="../../images/4-GithubActions/4.1/4.1.1.png" alt="SECRETS"></li>
 </ul>
 <ol start="2">
-<li>Chúng ta chuyển đến trang <strong>Actions secrets/New secret</strong><br>
-Tại giao diện này, ta lần lượt tạo <strong>5 Sercret</strong> ta đã liệt kê ở phía trên</li>
+<li>We will be redirected to <strong>Actions secrets/New secret</strong> page<br>
+At this interface, we in turn create 5 <strong>Sercrets</strong> we listed above</li>
 </ol>
 <ul>
 <li>
-<p>Tạo Secret: <strong>DOCKER_HUB_USERNAME</strong></p>
+<p>Create Secret: <strong>DOCKER_HUB_USERNAME</strong></p>
 <ul>
-<li>Tại mục <strong>Name</strong>, nhập <strong>DOCKER_HUB_USERNAME</strong></li>
-<li>Tại mục <strong>Secrets</strong>, nhập <strong>username</strong> tài khoản <strong>Dockerhub</strong></li>
-<li>Chọn <strong>Add secret</strong>
+<li>In the <strong>Name</strong> field, enter <strong>DOCKER_HUB_USERNAME</strong></li>
+<li>In the <strong>Secrets</strong> field, enter your <strong>Dockerhub username</strong></li>
+<li>Select <strong>Add secret</strong>
 <img src="../../images/4-GithubActions/4.1/4.1.2.png" alt="SECRETS"></li>
 </ul>
 </li>
 <li>
-<p>Tạo Secret: <strong>DOCKER_HUB_PASSWORD</strong></p>
+<p>Create Secret: <strong>DOCKER_HUB_PASSWORD</strong></p>
 <ul>
-<li>Chọn <strong>New repository secrets</strong></li>
-<li>Tại mục <strong>Name</strong>, nhập <strong>DOCKER_HUB_PASSWORD</strong></li>
-<li>Tại mục <strong>Secrets</strong>, nhập <strong>password</strong> tài khoản <strong>Dockerhub</strong></li>
-<li>Chọn <strong>Add secret</strong>
+<li>Select <strong>New repository secrets</strong></li>
+<li>In the <strong>Name</strong> field, enter <strong>DOCKER_HUB_PASSWORD</strong></li>
+<li>In the <strong>Secrets</strong> field, enter your <strong>Dockerhub password</strong></li>
+<li>Select <strong>Add secret</strong>
 <img src="../../images/4-GithubActions/4.1/4.1.3.png" alt="SECRETS"></li>
 </ul>
 </li>
 <li>
-<p>Tạo Secret: <strong>SSH_PRIVATE_KEY</strong></p>
+<p>Create Secret: <strong>SSH_PRIVATE_KEY</strong></p>
 <ul>
-<li>Chọn <strong>New repository secrets</strong></li>
-<li>Tại mục <strong>Name</strong>, nhập <strong>SSH_PRIVATE_KEY</strong></li>
-<li>Tại mục <strong>Secrets</strong>, dán nội dung được copy từ file <strong>aws_keypair.pem</strong> ở bước <strong>2.6</strong></li>
-<li>Chọn <strong>Add secret</strong>
+<li>Select <strong>New repository secrets</strong></li>
+<li>In the <strong>Name</strong> field, enter <strong>SSH_PRIVATE_KEY</strong></li>
+<li>In the <strong>Secrets</strong> field, paste the content copied from the <strong>aws_keypair.pem</strong> file</li>
+<li>Select <strong>Add secret</strong>
 <img src="../../images/4-GithubActions/4.1/4.1.4.png" alt="SECRETS"></li>
 </ul>
 </li>
 <li>
-<p>Tạo Secret: <strong>SSH_USERNAME</strong></p>
+<p>Create Secret: <strong>SSH_USERNAME</strong></p>
 <ul>
-<li>Chọn <strong>New repository secrets</strong></li>
-<li>Tại mục <strong>Name</strong>, nhập <strong>SSH_USERNAME</strong></li>
-<li>Tại mục <strong>Secrets</strong>, nhập <strong>ec2-user</strong></li>
-<li>Chọn <strong>Add secret</strong>
+<li>Select <strong>New repository secrets</strong></li>
+<li>In the <strong>Name</strong> field, enter <strong>SSH_USERNAME</strong></li>
+<li>In the <strong>Secrets</strong> field, enter <strong>ec2-user</strong></li>
+<li>Select <strong>Add secret</strong>
 <img src="../../images/4-GithubActions/4.1/4.1.5.png" alt="SECRETS"></li>
 </ul>
 </li>
 <li>
-<p>Tạo Secret: <strong>SSH_HOST</strong></p>
+<p>Create Secret: <strong>SSH_HOST</strong></p>
 <ul>
-<li>Chọn <strong>New repository secrets</strong></li>
-<li>Tại mục <strong>Name</strong>, nhập <strong>SSH_HOST</strong></li>
-<li>Tại mục <strong>Secrets</strong>, nhập IP Publish của <strong>docker_server</strong> được lưu lại ở bước <strong>2.6</strong></li>
-<li>Chọn <strong>Add secret</strong>
+<li>Select <strong>New repository secrets</strong></li>
+<li>In the <strong>Name</strong> field, enter <strong>SSH_HOST</strong></li>
+<li>In the <strong>Secrets</strong> field, enter the IP Address of the <strong>docker_server</strong> saved in step <strong>2.6</strong></li>
+<li>Select <strong>Add secret</strong>
 <img src="../../images/4-GithubActions/4.1/4.1.6.png" alt="SECRETS"></li>
 </ul>
 </li>
 </ul>
 <ol start="3">
-<li>Vậy là bạn đã hoàn thành bước <strong>Tạo Secrets</strong>, bao gồm <strong>5 Secret</strong></li>
+<li>Complete <strong>Create Secrets</strong> step, including <strong>5 secrets</strong>
+<img src="../../images/4-GithubActions/4.1/4.1.7.png" alt="SECRETS"></li>
 </ol>
-<p><img src="../../images/4-GithubActions/4.1/4.1.7.png" alt="SECRETS"></p>
 
 
 
@@ -1493,19 +1493,19 @@ Tại giao diện này, ta lần lượt tạo <strong>5 Sercret</strong> ta đ�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../../js/jquery.sticky.js?1691074209"></script>
-    <script src="../../js/featherlight.min.js?1691074209"></script>
-    <script src="../../js/highlight.pack.js?1691074209"></script>
+    <script src="../../js/clipboard.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1691333867"></script>
+    <script src="../../js/jquery.sticky.js?1691333867"></script>
+    <script src="../../js/featherlight.min.js?1691333867"></script>
+    <script src="../../js/highlight.pack.js?1691333867"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../../js/learn.js?1691074209"></script>
-    <script src="../../js/hugo-learn.js?1691074209"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1691333867"></script>
+    <script src="../../js/learn.js?1691333867"></script>
+    <script src="../../js/hugo-learn.js?1691333867"></script>
 
-    <link href="../../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1691074209"></script>
+    <link href="../../mermaid/mermaid.css?1691333867" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1691333867"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

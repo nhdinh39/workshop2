@@ -12,21 +12,21 @@
     <title>Tạo EC2 Instance :: CI/CD với Github Actions</title>
 
     
-    <link href="../../../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../../../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../../../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1691333868" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1691333868" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1691333868" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1691333868" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1691333868" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1691333868" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1691333868" rel="stylesheet">
+    <link href="../../../css/theme.css?1691333868" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1691333868" rel="stylesheet">
     
-    <link href="../../../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../../../css/theme-workshop.css?1691333868" rel="stylesheet">
     
     
 
-    <script src="../../../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../../../js/jquery-3.3.1.min.js?1691333868"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../../../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../../../js/lunr.min.js?1691333868"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1691333868"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="../../../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../../../js/search.js?1691333868"></script>
 
     
   </div>
@@ -945,20 +945,28 @@
 <li>Truy cập <a href="https://console.aws.amazon.com/ec2/v2/home">giao diện quản trị dịch vụ EC2</a></li>
 </ol>
 <ul>
-<li>Chọn <strong>Instances</strong></li>
-<li>Chọn <strong>Launch instances</strong></li>
+<li>
+<p>Chọn <strong>Instances</strong></p>
+</li>
+<li>
+<p>Chọn <strong>Launch instances</strong>
+<img src="../../../images/2-Preparation/2.6/2.6.1.png" alt="EC2"></p>
+</li>
+<li>
+<p>Tại mục <strong>Name</strong>, nhập <strong>docker_server</strong></p>
+</li>
+<li>
+<p>Tại mục <strong>Amazon Machine Image (AMI)</strong>, chọn <strong>Amazon Linux 2 AMI</strong>
+<img src="../../../images/2-Preparation/2.6/2.6.2.png" alt="EC2"></p>
+</li>
+<li>
+<p>Tại mục <strong>Instance type</strong>, chọn Instance type <strong>t2.micro</strong></p>
+</li>
+<li>
+<p>Tại mục <strong>Key pair (login)</strong>, chọn <strong>Create new key pair</strong>
+<img src="../../../images/2-Preparation/2.6/2.6.3.png" alt="EC2"></p>
+</li>
 </ul>
-<p><img src="../../../images/2-Preparation/2.6/2.6.1.png" alt="EC2"></p>
-<ul>
-<li>Tại mục <strong>Name</strong>, nhập <strong>docker_server</strong></li>
-<li>Tại mục <strong>Amazon Machine Image (AMI)</strong>, chọn <strong>Amazon Linux 2 AMI</strong></li>
-</ul>
-<p><img src="../../../images/2-Preparation/2.6/2.6.2.png" alt="EC2"></p>
-<ul>
-<li>Tại mục <strong>Instance type</strong>, chọn Instance type <strong>t2.micro</strong></li>
-<li>Tại mục <strong>Key pair (login)</strong>, chọn <strong>Create new key pair</strong></li>
-</ul>
-<p><img src="../../../images/2-Preparation/2.6/2.6.3.png" alt="EC2"></p>
 <ul>
 <li>Tại trang <strong>create new key pair</strong>:
 <ul>
@@ -978,7 +986,7 @@
 <li>Tại mục <strong>Subnet</strong>, chọn <strong>Lab-PUS</strong></li>
 <li>Tại mục <strong>Auto-assign Public IP</strong>, chọn <strong>Enable</strong>, nếu không <strong>Enable</strong> thì bạn có thể đã bỏ qua <strong>Enable auto-assign public IPv4 address</strong> ở bước <strong>2.2</strong></li>
 <li>Tại mục <strong>Firewall (security groups)</strong>, chọn <strong>Select existing security group</strong>, và chọn <strong>Lab-SG</strong></li>
-<li>Kiểm tra lại thông tin và nhấn <strong>Launch instance</strong></li>
+<li>Kiểm tra lại thông tin và chọn <strong>Launch instance</strong></li>
 </ul>
 <p><img src="../../../images/2-Preparation/2.6/2.6.5.png" alt="EC2"></p>
 <ol start="3">
@@ -987,9 +995,9 @@
 <ul>
 <li>Chọn <strong>Instance</strong></li>
 <li>Chọn <strong>docker_server</strong></li>
-<li>Tại tab <strong>Details</strong> ta lưu lại thông tin địa chỉ IP Publish của EC2 Instance tại mục <strong>Puclish IPv4 address</strong> để chuẩn bị thông tin cho những bước kế tiếp</li>
+<li>Tại tab <strong>Details</strong> ta lưu lại thông tin địa chỉ IP Publish của EC2 Instance tại mục <strong>Puclish IPv4 address</strong> để chuẩn bị thông tin cho những bước kế tiếp
+<img src="../../../images/2-Preparation/2.6/2.6.6.png" alt="EC2"></li>
 </ul>
-<p><img src="../../../images/2-Preparation/2.6/2.6.6.png" alt="EC2"></p>
 
 
 
@@ -1434,19 +1442,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1691074209"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../../../js/jquery.sticky.js?1691074209"></script>
-    <script src="../../../js/featherlight.min.js?1691074209"></script>
-    <script src="../../../js/highlight.pack.js?1691074209"></script>
+    <script src="../../../js/clipboard.min.js?1691333868"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1691333868"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1691333868"></script>
+    <script src="../../../js/jquery.sticky.js?1691333868"></script>
+    <script src="../../../js/featherlight.min.js?1691333868"></script>
+    <script src="../../../js/highlight.pack.js?1691333868"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../../../js/learn.js?1691074209"></script>
-    <script src="../../../js/hugo-learn.js?1691074209"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1691333868"></script>
+    <script src="../../../js/learn.js?1691333868"></script>
+    <script src="../../../js/hugo-learn.js?1691333868"></script>
 
-    <link href="../../../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1691074209"></script>
+    <link href="../../../mermaid/mermaid.css?1691333868" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1691333868"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

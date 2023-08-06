@@ -12,21 +12,21 @@
     <title>Create Workflow :: CI/CD with Github Actions</title>
 
     
-    <link href="../../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../../css/nucleus.css?1691333867" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/hybrid.css?1691333867" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1691333867" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1691333867" rel="stylesheet">
+    <link href="../../css/theme.css?1691333867" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1691333867" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1691333867" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1691333867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1691333867"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1691333867"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../../js/search.js?1691333867"></script>
 
     
   </div>
@@ -941,31 +941,33 @@
 
 
 	<h4 id="workflow">Workflow</h4>
-<p><strong>Workflow</strong> là một thủ tục tự động, được tạo bởi một hay nhiều job và các job này có thể chạy theo định kỳ hoặc trigger chạy khi nhận được một event nào đó.<br>
-Hay nói một cách khác, <strong>Workflow</strong> là tổng hợp các bước để xây dựng một trình tự CI/CD.</p>
-<h4 id="trình-tự-thực-hiện">Trình tự thực hiện</h4>
+<p>A <strong>workflow</strong> is an automated procedure, created by one or more jobs. These jobs can run on a schedule or be triggered by specific events.<br>
+In other words, a <strong>workflow</strong> is a combination of steps to build a CI/CD pipeline.</p>
+<h4 id="execution-sequence">Execution sequence</h4>
 <ol>
-<li>Từ giao diện Repository <strong>react-app-github-actions</strong> của bạn trên Github</li>
+<li>From the interface of your <strong>react-app-github-actions</strong> repository on Github</li>
 </ol>
 <ul>
-<li>Chọn <strong>Actions</strong>, chúng ta sẽ được chuyển đến trang <strong>Get started with Github Actions</strong></li>
-<li>Chọn <strong>set up a workflow yourself</strong></li>
+<li>Select <strong>Actions</strong>, and you will be redirected to the <strong>Get started with GitHub Actions</strong> page</li>
+<li>Select <strong>set up a workflow yourself</strong>
+<img src="../../images/4-GithubActions/4.2/4.2.1.png" alt="WORKFLOW"></li>
 </ul>
-<p><img src="../../images/4-GithubActions/4.2/4.2.1.png" alt="WORKFLOW"></p>
 <ol start="2">
-<li>Chúng ta chuyển đến trang <strong>Code</strong> để Edit <strong>Workflow</strong></li>
-</ol>
-<p><img src="../../images/4-GithubActions/4.2/4.2.2.png" alt="WORKFLOW"></p>
-<ol start="3">
-<li>Chúng ta sẽ tiến hành tìm hiểu từng bước để xây dựng <strong>Workflow</strong></li>
+<li>
+<p>We will be redirected to <strong>Code</strong> page to Edit <strong>Workflow</strong>
+<img src="../../images/4-GithubActions/4.2/4.2.2.png" alt="WORKFLOW"></p>
+</li>
+<li>
+<p>We will proceed to understand each step to build the <strong>Workflow</strong></p>
+</li>
 </ol>
 <ul>
-<li>Đầu tiên chúng ta đặt tên cho Workflow là <strong>CI/CD</strong></li>
+<li>First, we name the Workflow as <strong>CI/CD</strong></li>
 </ul>
 <pre tabindex="0"><code>name: CI/CD
 </code></pre><ul>
-<li>Tiếp theo chúng ta định nghĩa sự kiện <strong>trigger workflow</strong> là khi có <strong>sự kiện push trên branch main</strong>.<br>
-Có thể thêm nhánh khác nếu như Github Repository của chúng ta có nhiều nhánh khác.</li>
+<li>Next, we define the <strong>trigger event</strong> for the workflow, which is when there&rsquo;s a <strong>push event on the main branch</strong>.<br>
+You can add other branches if your Github Repository has multiple branches.</li>
 </ul>
 <pre tabindex="0"><code># Trigger by push event on branch main
 on:
@@ -973,8 +975,9 @@ on:
     branches:
       - main
 </code></pre><ul>
-<li>Tiếp đến là định nghĩa các biến môi trường dành cho <strong>Workflow</strong> này, với 5 thông tin lấy từ <strong>Secrets</strong> đã được tạo ở bước <strong>4.1</strong><br>
-<strong>DOCKER_HUB_REPOSITORIES</strong> là biến đặt tên cho Repository của chúng ta trên <strong>Dockerhub</strong>. Ở đây chúng ta setting mặc định giống tên của Repository trên Github.</li>
+<li>Next, we define the environment variables for this <strong>Workflow</strong>, using 5 <strong>Secrets</strong> that were created in step <strong>4.1</strong>.<br>
+<strong>DOCKER_HUB_REPOSITORIES</strong> is the variable for naming our repository on <strong>Dockerhub</strong>.
+Here, we set it by default to be the same as the name of the repository on Github.</li>
 </ul>
 <pre tabindex="0"><code># Define all environment variables (Previously defined in secrets and variables)
 env:
@@ -985,27 +988,27 @@ env:
   SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
   SSH_HOST: ${{ secrets.SSH_HOST }}
 </code></pre><hr>
-<p>Tiếp đến là phần quan trọng nhất, <strong>jobs</strong> sẽ chứa các job thực hiện quá trình CI/CD.<br>
-Ở đây chúng ta chia làm 2 job:</p>
+<p>Next is the most important part, the <strong>jobs</strong> section, which will contain the jobs responsible for the CI/CD process.<br>
+Here, we divide it into 2 jobs:</p>
 <ul>
 <li><strong>build-and-push</strong></li>
 <li><strong>deploy</strong></li>
 </ul>
-<p>Chúng ta sẽ tìm hiểu chi tiết hơn về từng job.</p>
+<p>We will go into more detail about each job.</p>
 <ul>
 <li><strong>build-and-push</strong>
 <ul>
-<li><code>runs-on: ubuntu-22.04</code>, ở đây ta định nghĩa server sẽ chạy job này trên nền tảng nào, ở đây chúng ta chọn <code>ubuntu-22.04</code></li>
-<li><code>steps</code>, ở đây ta sẽ định nghĩa những bước chạy cho job này:
+<li><code>runs-on: ubuntu-22.04</code>, here we define the platform on which the job will run, and in this case, we choose <code>ubuntu-22.04</code></li>
+<li><code>steps</code>, here we define the steps to be executed in this job:
 <ul>
-<li><code>name: Checkout code</code>, checkout để copy source code từ repository hiện tại vào server <code>ubuntu-22.04</code></li>
-<li><code>name: Login to Docker Hub</code>, login vào tài khoản Dockerhub của chúng ta</li>
-<li><code>name: Build and Push Image to Docker Hub</code>, ta sẽ tiến hành build image và push image lên trên Dockerhub của chúng ta
+<li><code>name: Checkout code</code>, checkout to copy the source code from the current repository to the <code>ubuntu-22.04</code> server</li>
+<li><code>name: Login to Docker Hub</code>, login to our Dockerhub account</li>
+<li><code>name: Build and Push Image to Docker Hub</code>, we will proceed to build the image and push it to our Dockerhub
 <ul>
 <li><code>docker build -t $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest .</code><br>
-Lệnh build image, chú ý dấu &quot;.&quot; có nghĩa là dùng chính Dockerfile trong thư mục hiện tại (ở đây là Github Repository của chúng ta)</li>
+Command to build the image, note that the &quot;.&quot; means using the Dockerfile in the current directory (which is the Github Repository)</li>
 <li><code>docker push $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest</code><br>
-Lệnh push image lên trên Dockerhub</li>
+Command to push the image to Dockerhub</li>
 </ul>
 </li>
 </ul>
@@ -1014,7 +1017,6 @@ Lệnh push image lên trên Dockerhub</li>
 </li>
 </ul>
 <pre tabindex="0"><code>
-
 # Define all jobs, include two jobs are build-and-push and deploy
 jobs:
 
@@ -1041,22 +1043,22 @@ jobs:
 </code></pre><ul>
 <li><strong>deploy</strong>
 <ul>
-<li><code>needs: build-and-push</code>, job này chỉ được chạy khi job <strong>build-and-push</strong> đã hoàn thành</li>
-<li><code>runs-on: ubuntu-22.04</code>, ở đây ta định nghĩa server sẽ chạy job này trên nền tảng nào, ở đây chúng ta chọn <code>ubuntu-22.04</code></li>
-<li><code>steps</code>, ở đây ta sẽ định nghĩa những bước chạy cho job này:
+<li><code>needs: build-and-push</code>, this job only runs when the <strong>build-and-push</strong> job has completed.</li>
+<li><code>runs-on: ubuntu-22.04</code>, here we define the platform on which the job will run, and in this case, we choose <code>ubuntu-22.04</code>.</li>
+<li><code>steps</code>, here we define the steps to be executed in this job:
 <ul>
-<li><code>name: Deploy to server</code>, kéo image mới nhất về từ dockerhub và triển khai lên docker_server
+<li><code>name: Deploy to server</code>, pull the latest image from Dockerhub and deploy it to the <code>docker_server</code>.
 <ul>
 <li><code>echo &quot;$SSH_PRIVATE_KEY&quot; &gt; sshkey.pem</code><br>
-Dán <strong>SSH_PRIVATE_KEY</strong> đến file <em>sshkey.pem</em></li>
+Paste the <strong>SSH_PRIVATE_KEY</strong> into the <em>sshkey.pem</em> file.</li>
 <li><code>chmod 400 sshkey.pem</code><br>
-Cấp quyền read đối với file <em>sshkey.pem</em> để chuẩn bị cho các bước <em><strong>ssh</strong></em> phía sau</li>
+Grant read permission to the <em>sshkey.pem</em> file to prepare for the following <em><strong>ssh</strong></em> steps.</li>
 <li><code>ssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST &quot;docker pull $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest&quot;</code><br>
-Lệnh ssh đến docker_server để chạy câu lệnh <code>docker pull</code> để kéo image mới nhất từ Dockerhub</li>
+SSH command to the <code>docker_server</code> to execute the <code>docker pull</code> command to pull the latest image from Dockerhub.</li>
 <li><code>ssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST &quot;docker rm -f react-app&quot;</code><br>
-Lệnh ssh đến docker_server để chạy câu lệnh <code>docker rm</code> để xóa container react-app nếu nó đã tồn tại, để bước sau có thể chạy container mới</li>
+SSH command to the <code>docker_server</code> to execute the <code>docker rm</code> command to remove the existing react-app container if it exists, allowing the next step to run a new container.</li>
 <li><code>ssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST &quot;docker run -d -p 3000:3000 --name react-app $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest&quot;</code><br>
-Lệnh ssh đến docker_server để chạy câu lệnh <code>docker run</code> để run container react-app ánh xạ vào host ở port (docker_server) 3000 với image mới nhất vừa được kéo về</li>
+SSH command to the <code>docker_server</code> to execute the <code>docker run</code> command to run the react-app container, mapping it to port 3000 on the host (docker_server) with the latest pulled image.</li>
 </ul>
 </li>
 </ul>
@@ -1088,11 +1090,11 @@ Lệnh ssh đến docker_server để chạy câu lệnh <code>docker run</code>
           # Run new container react-app on port 3000
           ssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST &#34;docker run -d -p 3000:3000 --name react-app $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest&#34;
 </code></pre>
-<div class="notices info" ><p>Trong các câu lệnh SSH phía trên ta có options <strong>StrictHostKeyChecking=no</strong> mục đích để bỏ qua yêu cầu xác minh khóa máy chủ (host key checking) khi kết nối thông qua SSH từ các máy khách.</p>
+<div class="notices info" ><p>In the above SSH commands, the <strong>StrictHostKeyChecking=no</strong> option is used to bypass the request for server host key verification when establishing SSH connections from client machines.</p>
 </div>
 
 <hr>
-<h4 id="cuối-cùng-ta-có-một-workflow-hoàn-chỉnh">Cuối cùng, ta có một Workflow hoàn chỉnh.</h4>
+<h4 id="finally-we-have-a-complete-workflow-in-place">Finally, we have a complete Workflow in place</h4>
 <pre tabindex="0"><code>name: CI/CD
 
 # Trigger by push event on branch main
@@ -1158,18 +1160,18 @@ jobs:
           # Run new container react-app on port 3000
           ssh -o StrictHostKeyChecking=no -i sshkey.pem $SSH_USERNAME@$SSH_HOST &#34;docker run -d -p 3000:3000 --name react-app $DOCKER_HUB_USERNAME/$DOCKER_HUB_REPOSITORIES:latest&#34;
 </code></pre><ol start="4">
-<li>Sau khi đã có <strong>Workflow</strong> hoàn chỉnh, hãy nhất <strong>Commit Changes</strong>
+<li>After you have a complete <strong>Workflow</strong>, select <strong>Commit Changes</strong>
 <img src="../../images/4-GithubActions/4.2/4.2.3.png" alt="WORKFLOW"></li>
 </ol>
-<p>Cửa sổ <strong>Commit changes</strong> hiện ra</p>
+<p>The <strong>Commit changes</strong> window will appear:</p>
 <ul>
-<li>Tại mục <strong>Commit message</strong>, nhập <strong>Create main.yml for Github Actions Workflows</strong></li>
-<li>Chọn <strong>Commit directly to the main branch</strong></li>
-<li>Chọn <strong>Commit changes</strong></li>
+<li>In the <strong>Commit message</strong> field, enter <strong>Create main.yml for Github Actions Workflows</strong></li>
+<li>Select <strong>Commit directly to the main branch</strong></li>
+<li>Select <strong>Commit changes</strong></li>
 </ul>
 <p><img src="../../images/4-GithubActions/4.2/4.2.4.png" alt="WORKFLOW"></p>
 <ol start="5">
-<li>Vậy là bạn đã hoàn thành bước <strong>Tạo Workflow</strong>. Tiếp theo chúng ta sẽ tiếp tục đến bước <strong>Kiểm tra quá trình CI/CD</strong> của mình</li>
+<li>Complete <strong>Create Workflow</strong> step. Next, we will proceed to the <strong>Check CI/CD Process</strong></li>
 </ol>
 
 
@@ -1615,19 +1617,19 @@ jobs:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../../js/jquery.sticky.js?1691074209"></script>
-    <script src="../../js/featherlight.min.js?1691074209"></script>
-    <script src="../../js/highlight.pack.js?1691074209"></script>
+    <script src="../../js/clipboard.min.js?1691333868"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1691333868"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1691333868"></script>
+    <script src="../../js/jquery.sticky.js?1691333868"></script>
+    <script src="../../js/featherlight.min.js?1691333868"></script>
+    <script src="../../js/highlight.pack.js?1691333868"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../../js/learn.js?1691074209"></script>
-    <script src="../../js/hugo-learn.js?1691074209"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1691333868"></script>
+    <script src="../../js/learn.js?1691333868"></script>
+    <script src="../../js/hugo-learn.js?1691333868"></script>
 
-    <link href="../../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1691074209"></script>
+    <link href="../../mermaid/mermaid.css?1691333868" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1691333868"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

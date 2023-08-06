@@ -12,21 +12,21 @@
     <title>Clone Repository :: CI/CD with Github Actions</title>
 
     
-    <link href="../../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../../css/nucleus.css?1691333867" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/hybrid.css?1691333867" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1691333867" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1691333867" rel="stylesheet">
+    <link href="../../css/theme.css?1691333867" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1691333867" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1691333867" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1691333867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1691333867"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1691333867"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../../js/search.js?1691333867"></script>
 
     
   </div>
@@ -941,65 +941,63 @@
 
 
 	<h4 id="clone-repository">Clone Repository</h4>
-<p><strong>Clone</strong> là một tính năng gần giống như Fork, Clone cho phép tạo ra bản sao dữ liệu hoàn chỉnh của kho đang được lưu chứa trên máy chủ và tất cả lịch sử trên kho. Với Clone, bạn có thể phục hồi bất kỳ bước nào dù đã commit.</p>
-<p>Ta sẽ tiến hành clone repository của chúng ta đã thực hiện ở bước <strong>3.1</strong> bằng cú pháp:</p>
+<p><strong>Clone</strong> is a feature similar to Fork. Clone allows you to create a complete copy of the repository data stored on the server, including its entire history. With Clone, you can revert to any step, even after committing.</p>
+<p>We will proceed to clone our repository that we performed in step <strong>3.1</strong> using the following syntax:</p>
 <pre tabindex="0"><code>git clone https://&lt;your_token&gt;@github.com/&lt;your_github_user_name&gt;/&lt;your_repository_name&gt;.git
-</code></pre><p>Với:</p>
+</code></pre><p>With:</p>
 <ul>
-<li><em>&lt;your_token&gt;</em> : Là token bạn đã lưu lại ở bước <strong>3.2</strong></li>
-<li><em>&lt;your_github_user_name&gt;</em> : Là tên tài khoản github của bạn</li>
-<li><em>&lt;your_repository_name&gt;</em> : Là tên repository bạn đã thay đổi khi <strong>Fork Repository</strong> ở bước <strong>3.1</strong></li>
+<li><em>&lt;your_token&gt;</em> : The token you saved in step <strong>3.2</strong></li>
+<li><em>&lt;your_github_user_name&gt;</em> : Your Github account username</li>
+<li><em>&lt;your_repository_name&gt;</em> : The repository name you changed when <strong>Fork Repository</strong> in step <strong>3.1</strong></li>
 </ul>
 
-<div class="notices warning" ><p>Trước khi thực hiện những bước dưới đây, hãy đảm bảo rằng máy tính bạn đã cài <strong>Git bash</strong> và <strong>Visual Studio Code</strong><br>
-Nếu không bạn có thể download tại đây:<br>
+<div class="notices warning" ><p>Before proceeding with the steps below, ensure that you have installed <strong>Git Bash</strong> and <strong>Visual Studio Code</strong> on your computer.<br>
+If not, you can download them here:<br>
 <a href="https://git-scm.com/downloads">Download Git bash</a><br>
 <a href="https://code.visualstudio.com/download">Download Visual Studio Code</a></p>
 </div>
 
-<h4 id="trình-tự-thực-hiện">Trình tự thực hiện</h4>
+<h4 id="execution-sequence">Execution sequence</h4>
 <ol>
-<li>
-<p>Chọn một thư mục bạn muốn lưu trữ Github Repository của mình</p>
-<ul>
-<li>Click chuột phải tại vùng trống của thư mục, chọn <strong>Git Bash Here</strong>
-<img src="../../images/3-GithubRepo/3.3/3.3.1.png" alt="FORK"></li>
-</ul>
-</li>
-<li>
-<p>Giao diện <strong>Git Bash</strong> hiện ra</p>
-</li>
+<li>Choose a folder where you want to store your Github Repository</li>
 </ol>
 <ul>
-<li>Tại giao diện này, ta thực hiện câu lệnh <strong>git clone</strong> bằng cú pháp đã nêu ra phía trên. Hãy thay đổi các thông tin cho phù hợp với bạn</li>
+<li>Right-click in the empty area of the folder, then select <strong>Git Bash Here</strong>
+<img src="../../images/3-GithubRepo/3.3/3.3.1.png" alt="FORK"></li>
+</ul>
+<ol start="2">
+<li>The <strong>Git Bash</strong> interface will appear</li>
+</ol>
+<ul>
+<li>At this interface, we execute the command <strong>git clone</strong> using the above mentioned syntax. Please change the information to suit you</li>
 </ul>
 <pre tabindex="0"><code>git clone https://&lt;your_token&gt;@github.com/&lt;your_github_user_name&gt;/&lt;your_repository_name&gt;.git
 </code></pre><ul>
-<li>Tiếp tục thực hiện change directory bằng lệnh <strong>cd</strong> vào thư mục <strong>git</strong> mình mới clone về.</li>
+<li>Continue to change directory with the command <strong>cd</strong> to the <strong>git</strong> directory I just cloned.</li>
 </ul>
-<pre tabindex="0"><code>cd react-app-github-actions
+<pre tabindex="0"><code>cd &lt;your_repository_name&gt;/
 </code></pre><ul>
-<li>Mở thư mục hiện tại bằng <strong>Visual Studio Code</strong></li>
+<li>Open current directory with <strong>Visual Studio Code</strong></li>
 </ul>
 <pre tabindex="0"><code>code .
 </code></pre><p><img src="../../images/3-GithubRepo/3.3/3.3.2.png" alt="FORK"></p>
 <ol start="3">
-<li>
-<p>Tại giao diện <strong>Visual Studio Code</strong> vừa được mở</p>
+<li>In the <strong>Visual Studio Code</strong> interface just opened</li>
+</ol>
 <ul>
-<li>Tại vùng trống của <strong>Explorer</strong>, ta nhấn chuột phải chọn <strong>Open in Intergrated Terminal</strong>
+<li>In the <strong>Explorer</strong> area, right-click and select <strong>Open in Integrated Terminal</strong>
 <img src="../../images/3-GithubRepo/3.3/3.3.3.png" alt="FORK"></li>
 </ul>
-</li>
-<li>
-<p>Tại giao diện <strong>Terminal</strong> vừa được mở</p>
+<ol start="4">
+<li>In the opened <strong>Terminal</strong> interface</li>
+</ol>
 <ul>
-<li>Nhấn <strong>dấu mũi tên xuống</strong> chọn <strong>Git Bash</strong> hoặc bạn có thể chọn <strong>CLI</strong> nào khác phù hợp với sở thích của bạn
+<li>Press the <strong>down arrow</strong> and select <strong>Git Bash</strong> or another suitable <strong>CLI</strong> based on your preference
 <img src="../../images/3-GithubRepo/3.3/3.3.4.png" alt="FORK"></li>
 </ul>
-</li>
+<ol start="5">
+<li>We have completed step <strong>Clone Repository</strong> and prepared the working environment for the next steps</li>
 </ol>
-<p>Vậy là bạn đã hoàn thành <strong>Clone Repository</strong> của mình vào chuẩn bị môi trường làm việc cho những bước tiếp theo.</p>
 
 
 
@@ -1444,19 +1442,19 @@ Nếu không bạn có thể download tại đây:<br>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../../js/jquery.sticky.js?1691074209"></script>
-    <script src="../../js/featherlight.min.js?1691074209"></script>
-    <script src="../../js/highlight.pack.js?1691074209"></script>
+    <script src="../../js/clipboard.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1691333867"></script>
+    <script src="../../js/jquery.sticky.js?1691333867"></script>
+    <script src="../../js/featherlight.min.js?1691333867"></script>
+    <script src="../../js/highlight.pack.js?1691333867"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../../js/learn.js?1691074209"></script>
-    <script src="../../js/hugo-learn.js?1691074209"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1691333867"></script>
+    <script src="../../js/learn.js?1691333867"></script>
+    <script src="../../js/hugo-learn.js?1691333867"></script>
 
-    <link href="../../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1691074209"></script>
+    <link href="../../mermaid/mermaid.css?1691333867" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1691333867"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

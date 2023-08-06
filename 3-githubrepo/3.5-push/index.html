@@ -12,21 +12,21 @@
     <title>Push Repository :: CI/CD with Github Actions</title>
 
     
-    <link href="../../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../../css/nucleus.css?1691333867" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/hybrid.css?1691333867" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1691333867" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1691333867" rel="stylesheet">
+    <link href="../../css/theme.css?1691333867" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1691333867" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1691333867" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1691333867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1691333867"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1691333867"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../../js/search.js?1691333867"></script>
 
     
   </div>
@@ -941,32 +941,32 @@
 
 
 	<h4 id="push-repository">Push Repository</h4>
-<p><strong>Push</strong> là một tính năng trong Github dùng để cập nhật tất cả các thay đổi tại máy local lên kho lưu trữ từ xa (remote repository).</p>
-<h4 id="trình-tự-thực-hiện">Trình tự thực hiện</h4>
+<p><strong>Push</strong> is a feature in Github used to update all changes from the local machine to a remote repository.</p>
+<h4 id="execution-sequence">Execution sequence</h4>
 <ol>
-<li>Tại giao diện Terminal trong <strong>Visual Studio Code</strong></li>
+<li>In the Terminal interface within <strong>Visual Studio Code</strong></li>
 </ol>
 <ul>
-<li>Thực hiện câu lệnh <code>git add .</code> để lưu tất cả các thay đổi của bạn vào vùng chờ (staging area) trong Git</li>
+<li>Execute the command <code>git add .</code> to save all your changes to the staging area in Git</li>
 </ul>
 <pre tabindex="0"><code>git add .
 </code></pre><ul>
-<li>Thực hiện câu lệnh <code>git commit -m &quot;Add Dockerfile&quot;</code>, để tạo một lần xác nhận (commit) để lưu trữ những thay đổi sau khi thực hiện lệnh <code>git add .</code> vào lịch sử của dự án với commit massage là <strong>Add Dockerfile</strong></li>
+<li>Execute the command <code>git commit -m &quot;Add Dockerfile&quot;</code> to create a commit and store the changes after using the <code>git add .</code> command in the project&rsquo;s history. The commit message is <strong>Add Dockerfile</strong></li>
 </ul>
 <pre tabindex="0"><code>git commit -m &#34;Add Dockerfile&#34;
 </code></pre><ul>
-<li>Thực hiện câu lệnh <code>git push</code> để đồng bộ hóa những thay đổi đã được xác nhận ở 2 bước <code>git add .</code> và <code>git commit -m &quot;Dockerfile&quot;</code> lên kho lưu trữ từ xa (remote repository)</li>
+<li>Execute the command <code>git push</code> to synchronize the changes that were confirmed in the <code>git add .</code> and <code>git commit -m &quot;Add Dockerfile&quot;</code> steps to the remote repository</li>
 </ul>
 <pre tabindex="0"><code>git push
 </code></pre><p><img src="../../images/3-GithubRepo/3.5/3.5.1.png" alt="PUSH"></p>
 <ol start="2">
 <li>
-<p>Tại giao diện Repository <strong>react-app-github-actions</strong> của bạn trên Github <br>
-Ta có thể thấy <strong>Dockerfile</strong> vừa được thêm vào Repository của chúng ta với commit message <strong>Add Dockerfile</strong>
+<p>In the interface of your <strong>react-app-github-actions</strong> repository on Github<br>
+You will see that the <strong>Dockerfile</strong> has been added to our Repository with the commit message <strong>Add Dockerfile</strong>
 <img src="../../images/3-GithubRepo/3.5/3.5.2.png" alt="PUSH"></p>
 </li>
 <li>
-<p>Vậy đã chúng ta đã hoàn thành bước <strong>Push Repository</strong></p>
+<p>Complete <strong>Push Repository</strong> step</p>
 </li>
 </ol>
 
@@ -1413,19 +1413,19 @@ Ta có thể thấy <strong>Dockerfile</strong> vừa được thêm vào Reposi
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../../js/jquery.sticky.js?1691074209"></script>
-    <script src="../../js/featherlight.min.js?1691074209"></script>
-    <script src="../../js/highlight.pack.js?1691074209"></script>
+    <script src="../../js/clipboard.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1691333867"></script>
+    <script src="../../js/jquery.sticky.js?1691333867"></script>
+    <script src="../../js/featherlight.min.js?1691333867"></script>
+    <script src="../../js/highlight.pack.js?1691333867"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../../js/learn.js?1691074209"></script>
-    <script src="../../js/hugo-learn.js?1691074209"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1691333867"></script>
+    <script src="../../js/learn.js?1691333867"></script>
+    <script src="../../js/hugo-learn.js?1691333867"></script>
 
-    <link href="../../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1691074209"></script>
+    <link href="../../mermaid/mermaid.css?1691333867" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1691333867"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

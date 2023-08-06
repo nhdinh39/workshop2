@@ -12,21 +12,21 @@
     <title>Install Docker :: CI/CD with Github Actions</title>
 
     
-    <link href="../../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../../css/nucleus.css?1691333867" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/hybrid.css?1691333867" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1691333867" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1691333867" rel="stylesheet">
+    <link href="../../css/theme.css?1691333867" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1691333867" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1691333867" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1691333867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1691333867"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1691333867"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../../js/search.js?1691333867"></script>
 
     
   </div>
@@ -940,58 +940,58 @@
 
 
 
-	<h4 id="trình-tự-thực-hiện">Trình tự thực hiện</h4>
+	<h4 id="execution-sequence">Execution sequence</h4>
 <ol>
-<li>Trước tiên chúng ta cần SSH vào Server EC2 mà chúng ta đã tạo ở bước <strong>2.6</strong> <br>
-Ở đây mình dùng <strong>MobaXterm</strong>. Bạn có thể xem chi tiết hơn <a href="https://000004.awsstudygroup.com/vi/4-launchlinuxinstance/4.2-connectlinuxinstance/">Cách kết nối EC2 Instance bằng MobaXterm</a></li>
+<li>First, we need to SSH into the EC2 Instance that we created in step <strong>2.6</strong> <br>
+Here, I will use <strong>MobaXterm</strong>. You can find more detailed instructions in <a href="https://000004.awsstudygroup.com/vi/4-launchlinuxinstance/4.2-connectlinuxinstance/">How to Connect to an EC2 Instance using MobaXterm</a></li>
 </ol>
 <ul>
-<li>Chọn <strong>Session</strong></li>
-<li>Chọn <strong>SSH</strong></li>
-<li>Tại mục <strong>Remote host</strong>, nhập <strong>IP Publish của EC2 Instance</strong> đã được lưu lại ở bước <strong>2.6</strong></li>
-<li>Chọn <strong>Specify username</strong>, nhập <strong>ec2-user</strong></li>
-<li>Chọn <strong>Advange SSH Settings</strong></li>
-<li>Chọn <strong>use private key</strong>, sau đó truy xuất đường dẫn đến file <strong>aws_keypair.pem</strong> đã lưu ở bước <strong>2.6</strong></li>
-<li>Chọn <strong>OK</strong>
+<li>Select <strong>Session</strong></li>
+<li>Select <strong>SSH</strong></li>
+<li>In the <strong>Remote host</strong> field, enter the <strong>Public IP address of the EC2 Instance</strong> that you saved in step <strong>2.6</strong></li>
+<li>Select <strong>Specify username</strong> and enter <strong>ec2-user</strong></li>
+<li>Select <strong>Advange SSH Settings</strong></li>
+<li>Select <strong>use private key</strong>, and then browse to the path of the <strong>aws_keypair.pem</strong> file you saved in step <strong>2.6</strong></li>
+<li>Select <strong>OK</strong>
 <img src="../../images/2-Preparation/2.7/2.7.1.png" alt="DOCKER"></li>
 </ul>
 
-<div class="notices info" ><p><strong>ec2-user</strong> là user mặc định của các Linux Instance được tạo từ các <strong>Amazon Machine Image (AMI)</strong></p>
+<div class="notices info" ><p><strong>ec2-user</strong> is the default user for Linux Instances created from <strong>Amazon Machine Images (AMIs)</strong></p>
 </div>
 
-<p><em>Kết nối thành công như hình bên dưới</em>
-<img src="../../images/2-Preparation/2.7/2.7.2.png" alt="DOCKER"></p>
+<p><em>You&rsquo;ll see a successful connection as shown below</em></p>
+<p><img src="../../images/2-Preparation/2.7/2.7.2.png" alt="DOCKER"></p>
 <ol start="2">
-<li>Tiếp theo chúng ta tiến hành thực hiện các câu lệnh để cài đặt <strong>Docker</strong></li>
+<li>Next, we proceed to execute the commands to install <strong>Docker</strong></li>
 </ol>
 <ul>
-<li>Cập nhật các bản cập nhật đang chờ xử lý:</li>
+<li>Update the pending updates</li>
 </ul>
 <pre tabindex="0"><code>sudo yum update -y
 </code></pre><ul>
-<li>Cài đặt <strong>docker</strong></li>
+<li>Install <strong>docker</strong></li>
 </ul>
 <pre tabindex="0"><code>sudo yum install docker -y
 </code></pre><p><img src="../../images/2-Preparation/2.7/2.7.3.png" alt="DOCKER"></p>
 <ul>
-<li>Thêm <strong>ec2-user</strong> vào group <strong>docker</strong></li>
+<li>Add <strong>ec2-user</strong> to the <strong>docker</strong> group</li>
 </ul>
 <pre tabindex="0"><code>sudo usermod -aG docker ec2-user
 </code></pre><ul>
-<li>Kích hoạt <strong>docker service</strong> chạy khi khởi động</li>
+<li>Activate the <strong>docker service</strong> to run on startup</li>
 </ul>
 <pre tabindex="0"><code>sudo systemctl enable docker.service
 </code></pre><ul>
-<li>Chạy <strong>docker service</strong></li>
+<li>Run <strong>docker service</strong></li>
 </ul>
 <pre tabindex="0"><code>sudo systemctl start docker.service
 </code></pre><ul>
-<li>Kiểm tra trạng thái của <strong>docker service</strong></li>
+<li>Check the status of the <strong>docker service</strong></li>
 </ul>
 <pre tabindex="0"><code>sudo systemctl status docker.service
 </code></pre><p><img src="../../images/2-Preparation/2.7/2.7.4.png" alt="DOCKER"></p>
 <ol start="3">
-<li>Chúng ta thấy <strong>docker service</strong> hiện đang <strong>running</strong>, như vậy chúng ta đã hoàn thành việc <strong>Cài đặt Docker</strong> trên EC2 Instance</li>
+<li>We can see that the <strong>docker service</strong> is currently <strong>running</strong>, indicating that we have successfully <strong>Installed Docker</strong> on the EC2 Instance</li>
 </ol>
 
 
@@ -1437,19 +1437,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../../js/jquery.sticky.js?1691074209"></script>
-    <script src="../../js/featherlight.min.js?1691074209"></script>
-    <script src="../../js/highlight.pack.js?1691074209"></script>
+    <script src="../../js/clipboard.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1691333867"></script>
+    <script src="../../js/jquery.sticky.js?1691333867"></script>
+    <script src="../../js/featherlight.min.js?1691333867"></script>
+    <script src="../../js/highlight.pack.js?1691333867"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../../js/learn.js?1691074209"></script>
-    <script src="../../js/hugo-learn.js?1691074209"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1691333867"></script>
+    <script src="../../js/learn.js?1691333867"></script>
+    <script src="../../js/hugo-learn.js?1691333867"></script>
 
-    <link href="../../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1691074209"></script>
+    <link href="../../mermaid/mermaid.css?1691333867" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1691333867"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

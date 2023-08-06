@@ -12,21 +12,21 @@
     <title>Introduction :: CI/CD with Github Actions</title>
 
     
-    <link href="../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../css/nucleus.css?1691333867" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1691333867" rel="stylesheet">
+    <link href="../css/hybrid.css?1691333867" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1691333867" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1691333867" rel="stylesheet">
+    <link href="../css/auto-complete.css?1691333867" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1691333867" rel="stylesheet">
+    <link href="../css/theme.css?1691333867" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1691333867" rel="stylesheet">
     
-    <link href="../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../css/theme-workshop.css?1691333867" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../js/jquery-3.3.1.min.js?1691333867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1691333867"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1691333867"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../js/search.js?1691333867"></script>
 
     
   </div>
@@ -934,7 +934,7 @@
 
 
 
-	<h4 id="chúng-ta-sẽ-tìm-hiểu-một-số-khái-niệm-chính-liên-quan-đến-workshop-này">Chúng ta sẽ tìm hiểu một số khái niệm chính liên quan đến Workshop này:</h4>
+	<h4 id="we-will-learn-some-key-concepts-related-to-this-workshop">We will learn some key concepts related to this Workshop:</h4>
 <ul>
 <li>CICD</li>
 <li>Github</li>
@@ -943,26 +943,27 @@
 <li>Docker Hub</li>
 </ul>
 <h4 id="cicd">CICD</h4>
-<p><img src="../images/cicd.png" alt="cicd"></p>
-<p><strong>CI</strong> là viết tắt của <em>Continuous Integration</em> (tích hợp liên tục).<br>
-<strong>CD</strong> là viết tắt của <em>Continuous Delivery</em> (chuyển giao liên tục) hoặc <em>Continuous Deployment</em> (triển khai liên tục).<br>
-Khái niệm <strong>CI/CD</strong> thường đề cập đến việc tự động hóa trong quy trình phát triển phần mềm và chuyển giao sản phẩm, giúp cho việc tích hợp diễn ra nhanh hơn và sản phẩm hoàn thiện được chuyển đến người dùng trong thời gian ngắn nhất.</p>
+<p><img src="../images/cicd.png" alt="CICD"></p>
+<p><strong>CI</strong> stands for <em>Continuous Integration</em>.<br>
+<strong>CD</strong> stands for <em>Continuous Delivery</em> or <em>Continuous Deployment</em>.<br>
+The concept of <strong>CI/CD</strong> generally refers to automation in the software development and product delivery process, making integration faster and the finished product delivered to users within a  the shortest time.</p>
 <h4 id="github">Github</h4>
-<p><img src="../images/github.png" alt="github">
-<strong>Github</strong> là <em>một hệ thống quản lý dự án cũng như các phiên bản Code</em>. Nền tảng này được ví như mạng xã hội dành riêng cho các lập trình viên. Tại đó, coder được quyền clone lại mã nguồn từ một Repository.<br>
-<strong>GitHub</strong> cũng đóng vai trò là một dịch vụ máy chủ Repository. Mục đích sử dụng để lưu trữ code, mỗi người có thể tạo tài khoản riêng và tạo ra kho chứa của mình. Nhờ thế, mỗi lần cần tái sử dụng, bạn nhanh chóng tìm thấy và vận dụng dễ dàng.</p>
+<p><img src="../images/github.png" alt="GITHUB">
+<strong>Github</strong> is <em>a platform that serves as both a project management system and a
+versioncontrol system</em>. This platform is often likened to a social network designed specifically for programmers. On GitHub, coders have the ability to clone source code from a repository.<br>
+<strong>GitHub</strong> also functions as a repository hosting service. Its purpose is to store code, allowing individuals to create their own accounts and repositories. As a result, whenever you need to reuse code, you can quickly find and utilize it with ease.</p>
 <h4 id="github-actions">Github Actions</h4>
-<p><img src="../images/githubactions.png" alt="githubactions">
-<strong>Github Actions</strong> giúp chúng ta tự động hóa quy trình phát triển phần mềm tại nơi chúng ta lưu trữ code và kết hợp với pull request và issues. Chúng ta có thể viết các tác vụ riêng lẻ, được gọi là các actions và kết hợp các actions đó lại với nhau để tạo ra một workflow theo ý của chúng ta. Workflow là các tiến trình tự động mà bạn có thể thiết lập trong repository của mình để build, test, publish package, release, hoặc deploy dự nào trên Github.<br>
-Với <strong>Github Actions</strong> chúng ta có thể tích hợp Continuous Integration (CI) và Continuous Deployment (CD) trực tiếp trên repository của mình</p>
+<p><img src="../images/githubactions.png" alt="GITHUBACTIONS">
+<strong>Github Actions</strong> helps us automate the software development process where we store our code and associate it with pull requests and issues. We can write individual tasks, called actions, and combine those actions to create a workflow of our own. Workflows are automated processes that you can set up in your repository to build, test, publish a package, release, or deploy any project on Github.<br>
+With <strong>Github Actions</strong>, we can integrate Continuous Integration (CI) and Continuous Deployment (CD) directly into our repository.</p>
 <h4 id="docker">Docker</h4>
-<p><img src="../images/docker.png" alt="docker">
-<strong>Docker</strong> là nền tảng phần mềm cho phép bạn dựng, kiểm thử và triển khai ứng dụng một cách nhanh chóng. Docker đóng gói phần mềm vào các đơn vị tiêu chuẩn hóa được gọi là container có mọi thứ mà phần mềm cần để chạy, trong đó có thư viện, công cụ hệ thống, mã và thời gian chạy.<br>
-Bằng cách sử dụng <strong>Docker</strong>, bạn có thể nhanh chóng triển khai và thay đổi quy mô ứng dụng vào bất kỳ môi trường nào và biết chắc rằng mã của bạn sẽ chạy được.</p>
+<p><img src="../images/docker.png" alt="DOCKER">
+<strong>Docker</strong> is a software platform that allows you to build, test, and deploy applications quickly. Docker packages software into standardized units called containers that have everything the software needs to run, including libraries, system tools, code, and runtime.<br>
+By utilizing <strong>Docker</strong>, you can quickly deploy and scale your application to any environment and know with certainty that your code will run.</p>
 <h4 id="docker-hub">Docker Hub</h4>
-<p><img src="../images/dockerhub.png" alt="docker">
-Docker Hub là một dịch vụ do Docker cung cấp, cho phép tìm kiếm và chia sẻ các container images.<br>
-Là nơi giúp bạn có thể lưu trữ các chương trình đã được đóng gói (image) của mình và tìm kiếm các image được người khác publish.</p>
+<p><img src="../images/dockerhub.png" alt="DOCKERHUB">
+<strong>Docker Hub</strong> is a service provided by Docker that enables you to search for and share container images.<br>
+It serves as a platform where you can store your packaged programs (images) and search for images published by others.</p>
 
 
 
@@ -1400,19 +1401,19 @@ Là nơi giúp bạn có thể lưu trữ các chương trình đã được đ�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1691074209"></script>
-    <script src="../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../js/jquery.sticky.js?1691074209"></script>
-    <script src="../js/featherlight.min.js?1691074209"></script>
-    <script src="../js/highlight.pack.js?1691074209"></script>
+    <script src="../js/clipboard.min.js?1691333867"></script>
+    <script src="../js/perfect-scrollbar.min.js?1691333867"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1691333867"></script>
+    <script src="../js/jquery.sticky.js?1691333867"></script>
+    <script src="../js/featherlight.min.js?1691333867"></script>
+    <script src="../js/highlight.pack.js?1691333867"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../js/learn.js?1691074209"></script>
-    <script src="../js/hugo-learn.js?1691074209"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1691333867"></script>
+    <script src="../js/learn.js?1691333867"></script>
+    <script src="../js/hugo-learn.js?1691333867"></script>
 
-    <link href="../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1691074209"></script>
+    <link href="../mermaid/mermaid.css?1691333867" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1691333867"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

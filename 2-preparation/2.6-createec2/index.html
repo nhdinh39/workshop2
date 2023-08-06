@@ -12,21 +12,21 @@
     <title>Create EC2 Instance :: CI/CD with Github Actions</title>
 
     
-    <link href="../../css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="../../css/theme.css?1691074209" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="../../css/nucleus.css?1691333867" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/hybrid.css?1691333867" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1691333867" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1691333867" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1691333867" rel="stylesheet">
+    <link href="../../css/theme.css?1691333867" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1691333867" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1691333867" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1691333867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1691333867"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1691333867"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1691074209"></script>
+<script type="text/javascript" src="../../js/search.js?1691333867"></script>
 
     
   </div>
@@ -940,56 +940,64 @@
 
 
 
-	<h4 id="trình-tự-thực-hiện">Trình tự thực hiện</h4>
+	<h4 id="execution-sequence">Execution sequence</h4>
 <ol>
-<li>Truy cập <a href="https://console.aws.amazon.com/ec2/v2/home">giao diện quản trị dịch vụ EC2</a></li>
+<li>Go to <a href="https://console.aws.amazon.com/ec2/v2/home">EC2 service management console</a></li>
 </ol>
 <ul>
-<li>Click <strong>Instances</strong></li>
-<li>Click <strong>Launch instances</strong></li>
+<li>
+<p>Select <strong>Instances</strong></p>
+</li>
+<li>
+<p>Select <strong>Launch instances</strong>
+<img src="../../images/2-Preparation/2.6/2.6.1.png" alt="EC2"></p>
+</li>
+<li>
+<p>In the <strong>Name</strong> field, enter <strong>docker_server</strong></p>
+</li>
+<li>
+<p>In the <strong>Amazon Machine Image (AMI)</strong> field, select <strong>Amazon Linux 2 AMI</strong>
+<img src="../../images/2-Preparation/2.6/2.6.2.png" alt="EC2"></p>
+</li>
+<li>
+<p>In the <strong>Instance type</strong> field, choose <strong>t2.micro</strong></p>
+</li>
+<li>
+<p>In the <strong>Key pair (login)</strong> field, select <strong>Create new key pair</strong>
+<img src="../../images/2-Preparation/2.6/2.6.3.png" alt="EC2"></p>
+</li>
 </ul>
-<p><img src="../../images/2-Preparation/2.6/2.6.1.png" alt="EC2"></p>
 <ul>
-<li>Tại mục <strong>Name</strong>, nhập <strong>docker_server</strong></li>
-<li>Tại mục <strong>Amazon Machine Image (AMI)</strong>, chọn <strong>Amazon Linux 2 AMI</strong></li>
-</ul>
-<p><img src="../../images/2-Preparation/2.6/2.6.2.png" alt="EC2"></p>
+<li>On the <strong>Create new key pair</strong> page
 <ul>
-<li>Tại mục <strong>Instance type</strong>, chọn Instance type <strong>t2.micro</strong></li>
-<li>Tại mục <strong>Key pair (login)</strong>, chọn <strong>Create new key pair</strong></li>
-</ul>
-<p><img src="../../images/2-Preparation/2.6/2.6.3.png" alt="EC2"></p>
-<ul>
-<li>Tại trang <strong>create new key pair</strong>:
-<ul>
-<li>Tại mục <strong>key pair name</strong>, nhập <strong>aws_keypair</strong></li>
-<li>Tại mục <strong>key pair type</strong>, chọn <strong>RSA</strong></li>
-<li>Tại mục <strong>private key file format</strong> chọn <strong>.pem</strong></li>
-<li>Sau đó chọn <strong>Create key pair</strong> và lưu lại file <strong>aws_keypair.pem</strong> trên máy tính của bạn để sử dụng cho dịch vụ <strong>SSH</strong> ở những bước kế tiếp
+<li>In the <strong>Key pair name</strong> field, enter <strong>aws_keypair</strong></li>
+<li>In the <strong>Key pair type</strong> field, select <strong>RSA</strong></li>
+<li>In the <strong>Private key file format</strong> field, select <strong>.pem</strong></li>
+<li>Then select <strong>Create key pair</strong> and save the <strong>aws_keypair.pem</strong> file on your computer to use for the <strong>SSH</strong> service in the next steps
 <img src="../../images/2-Preparation/2.6/2.6.4.png" alt="EC2"></li>
 </ul>
 </li>
 </ul>
 <ol start="2">
-<li>Tại mục <strong>Network settings</strong> chọn <strong>Edit</strong></li>
+<li>In the <strong>Network settings</strong> section, select <strong>Edit</strong></li>
 </ol>
 <ul>
-<li>Tại mục <strong>VPC</strong>, chọn <strong>Lab-VPC</strong></li>
-<li>Tại mục <strong>Subnet</strong>, chọn <strong>Lab-PUS</strong></li>
-<li>Tại mục <strong>Auto-assign Public IP</strong>, chọn <strong>Enable</strong>, nếu không <strong>Enable</strong> thì bạn có thể đã bỏ qua <strong>Enable auto-assign public IPv4 address</strong> ở bước <strong>2.2</strong></li>
-<li>Tại mục <strong>Firewall (security groups)</strong>, chọn <strong>Select existing security group</strong>, và chọn <strong>Lab-SG</strong></li>
-<li>Kiểm tra lại thông tin và nhấn <strong>Launch instance</strong></li>
+<li>In the <strong>VPC</strong> field, select <strong>Lab-VPC</strong></li>
+<li>In the <strong>Subnet</strong> field, select <strong>Lab-PUS</strong></li>
+<li>In the <strong>Auto-assign Public IP</strong> field, select <strong>Enable</strong>, unless you have already enabled <strong>Enable auto-assign public IPv4 address</strong> in step <strong>2.2</strong></li>
+<li>In the <strong>Firewall (security groups)</strong> field, select <strong>Select existing security group</strong>, and select <strong>Lab-SG</strong></li>
+<li>Review the information and select <strong>Launch instance</strong>
+<img src="../../images/2-Preparation/2.6/2.6.5.png" alt="EC2"></li>
 </ul>
-<p><img src="../../images/2-Preparation/2.6/2.6.5.png" alt="EC2"></p>
 <ol start="3">
-<li>Đợi khoảng 3-5 phút ta truy cập lại <a href="https://console.aws.amazon.com/ec2/v2/home">giao diện quản trị dịch vụ EC2</a></li>
+<li>Wait for about 3-5 minutes and then access the <a href="https://console.aws.amazon.com/ec2/v2/home">EC2 service management console</a> again</li>
 </ol>
 <ul>
-<li>Chọn <strong>Instance</strong></li>
-<li>Chọn <strong>docker_server</strong></li>
-<li>Tại tab <strong>Details</strong> ta lưu lại thông tin địa chỉ IP Publish của EC2 Instance tại mục <strong>Puclish IPv4 address</strong> để chuẩn bị thông tin cho những bước kế tiếp</li>
+<li>Select <strong>Instance</strong></li>
+<li>Select <strong>docker_server</strong></li>
+<li>In the <strong>Details</strong> tab, save the IP address information of the EC2 Instance in the <strong>Public IPv4 address</strong> field for the next steps
+<img src="../../images/2-Preparation/2.6/2.6.6.png" alt="EC2"></li>
 </ul>
-<p><img src="../../images/2-Preparation/2.6/2.6.6.png" alt="EC2"></p>
 
 
 
@@ -1434,19 +1442,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="../../js/jquery.sticky.js?1691074209"></script>
-    <script src="../../js/featherlight.min.js?1691074209"></script>
-    <script src="../../js/highlight.pack.js?1691074209"></script>
+    <script src="../../js/clipboard.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1691333867"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1691333867"></script>
+    <script src="../../js/jquery.sticky.js?1691333867"></script>
+    <script src="../../js/featherlight.min.js?1691333867"></script>
+    <script src="../../js/highlight.pack.js?1691333867"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="../../js/learn.js?1691074209"></script>
-    <script src="../../js/hugo-learn.js?1691074209"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1691333867"></script>
+    <script src="../../js/learn.js?1691333867"></script>
+    <script src="../../js/hugo-learn.js?1691333867"></script>
 
-    <link href="../../mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1691074209"></script>
+    <link href="../../mermaid/mermaid.css?1691333867" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1691333867"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

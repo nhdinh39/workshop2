@@ -12,21 +12,21 @@
     <title>CI/CD với Github Actions :: CI/CD with Github Actions</title>
 
     
-    <link href="./css/nucleus.css?1691074209" rel="stylesheet">
-    <link href="./css/fontawesome-all.min.css?1691074209" rel="stylesheet">
-    <link href="./css/hybrid.css?1691074209" rel="stylesheet">
-    <link href="./css/featherlight.min.css?1691074209" rel="stylesheet">
-    <link href="./css/perfect-scrollbar.min.css?1691074209" rel="stylesheet">
-    <link href="./css/auto-complete.css?1691074209" rel="stylesheet">
-    <link href="./css/atom-one-dark-reasonable.css?1691074209" rel="stylesheet">
-    <link href="./css/theme.css?1691074209" rel="stylesheet">
-    <link href="./css/hugo-theme.css?1691074209" rel="stylesheet">
+    <link href="./css/nucleus.css?1691333867" rel="stylesheet">
+    <link href="./css/fontawesome-all.min.css?1691333867" rel="stylesheet">
+    <link href="./css/hybrid.css?1691333867" rel="stylesheet">
+    <link href="./css/featherlight.min.css?1691333867" rel="stylesheet">
+    <link href="./css/perfect-scrollbar.min.css?1691333867" rel="stylesheet">
+    <link href="./css/auto-complete.css?1691333867" rel="stylesheet">
+    <link href="./css/atom-one-dark-reasonable.css?1691333867" rel="stylesheet">
+    <link href="./css/theme.css?1691333867" rel="stylesheet">
+    <link href="./css/hugo-theme.css?1691333867" rel="stylesheet">
     
-    <link href="./css/theme-workshop.css?1691074209" rel="stylesheet">
+    <link href="./css/theme-workshop.css?1691333867" rel="stylesheet">
     
     
 
-    <script src="./js/jquery-3.3.1.min.js?1691074209"></script>
+    <script src="./js/jquery-3.3.1.min.js?1691333867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="./js/lunr.min.js?1691074209"></script>
-<script type="text/javascript" src="./js/auto-complete.js?1691074209"></script>
+<script type="text/javascript" src="./js/lunr.min.js?1691333867"></script>
+<script type="text/javascript" src="./js/auto-complete.js?1691333867"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="./js/search.js?1691074209"></script>
+<script type="text/javascript" src="./js/search.js?1691333867"></script>
 
     
   </div>
@@ -882,18 +882,18 @@
 </span>
 
  
-<h1 id="cicd-với-github-actions">CI/CD với Github Actions</h1>
-<h3 id="tổng-quan">Tổng quan</h3>
-<p>Trong bài Lab này, chúng ta sẽ cùng tìm hiểu các bước xây dụng quy trình CI/CD để tiến hành để build một Docker Image cho 1 ứng dụng chạy bằng React và triển khai ứng dụng đó lên một Server chạy Docker thông qua Github Actions.</p>
+<h1 id="cicd-with-github-actions">CI/CD with Github Actions</h1>
+<h3 id="overview">Overview</h3>
+<p>In this lab, we will explore the steps to build a CI/CD pipeline to build a Docker image for a React application and deploy that application to a Docker-running server using GitHub Actions.</p>
 <p><img src="./images/architecture.png" alt="architecture"></p>
 <h3 id="nội-dung">Nội dung</h3>
 <ol>
-<li><a href="1-introduce/">Giới thiệu</a></li>
-<li><a href="2-preparation/">Các bước chuẩn bị</a></li>
-<li><a href="3-githubrepo/">Thao tác với Github Repository</a></li>
-<li><a href="4-githubactions/">Thao tác với Github Actions</a></li>
-<li><a href="5-updatecheck/">Test và Kiểm tra</a></li>
-<li><a href="6-cleanup/">Dọn dẹp tài nguyên</a></li>
+<li><a href="1-introduce/">Introduction</a></li>
+<li><a href="2-preparation/">Preparation</a></li>
+<li><a href="3-githubrepo/">Work with Github Repository</a></li>
+<li><a href="4-githubactions/">Work with Github Actions</a></li>
+<li><a href="5-updatecheck/">Update and Check</a></li>
+<li><a href="6-cleanup/">Clean Up Resources</a></li>
 </ol>
 	
   
@@ -1322,19 +1322,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="./js/clipboard.min.js?1691074209"></script>
-    <script src="./js/perfect-scrollbar.min.js?1691074209"></script>
-    <script src="./js/perfect-scrollbar.jquery.min.js?1691074209"></script>
-    <script src="./js/jquery.sticky.js?1691074209"></script>
-    <script src="./js/featherlight.min.js?1691074209"></script>
-    <script src="./js/highlight.pack.js?1691074209"></script>
+    <script src="./js/clipboard.min.js?1691333867"></script>
+    <script src="./js/perfect-scrollbar.min.js?1691333867"></script>
+    <script src="./js/perfect-scrollbar.jquery.min.js?1691333867"></script>
+    <script src="./js/jquery.sticky.js?1691333867"></script>
+    <script src="./js/featherlight.min.js?1691333867"></script>
+    <script src="./js/highlight.pack.js?1691333867"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="./js/modernizr.custom-3.6.0.js?1691074209"></script>
-    <script src="./js/learn.js?1691074209"></script>
-    <script src="./js/hugo-learn.js?1691074209"></script>
+    <script src="./js/modernizr.custom-3.6.0.js?1691333867"></script>
+    <script src="./js/learn.js?1691333867"></script>
+    <script src="./js/hugo-learn.js?1691333867"></script>
 
-    <link href="./mermaid/mermaid.css?1691074209" rel="stylesheet" />
-    <script src="./mermaid/mermaid.js?1691074209"></script>
+    <link href="./mermaid/mermaid.css?1691333867" rel="stylesheet" />
+    <script src="./mermaid/mermaid.js?1691333867"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
