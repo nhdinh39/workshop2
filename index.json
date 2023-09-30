@@ -1,10 +1,10 @@
 [
 {
 	"uri": "/",
-	"title": "CI/CD với Github Actions",
+	"title": "CI/CD with Github Actions",
 	"tags": [],
 	"description": "",
-	"content": "CI/CD with Github Actions Overview In this lab, we will explore the steps to build a CI/CD pipeline to build a Docker image for a React application and deploy that application to a Docker-running server using GitHub Actions.\nNội dung Introduction Preparation Work with Github Repository Work with Github Actions Update and Check Clean Up Resources "
+	"content": "CI/CD with Github Actions Overview In this lab, we will explore the steps to build a CI/CD pipeline to build a Docker image for a React application and deploy that application to a Docker-running server using GitHub Actions.\nContent 1. Introduction\n2. Preparation\n3. Work with Github Repository\n4. Work with Github Actions\n5. Update and Check\n6. Clean Up Resources\n"
 },
 {
 	"uri": "/4-githubactions/4.1-createsecrets/",
@@ -74,7 +74,7 @@
 	"title": "Preparation",
 	"tags": [],
 	"description": "",
-	"content": "In this step, we will sequentially create:\n1 VPC 1 Public Subnet 1 Internet Gateway 1 Route Table 1 Security Group 1 EC2 instance with Docker installed The architecture overview after completing this step will be as follows\nContent 2.1 Create VPC 2.2 Create Public Subnet 2.3 Create Internet Gateway 2.4 Create Route Table 2.5 Create Security Group 2.6 Create EC2 Instance 2.7 Install Docker "
+	"content": "In this step, we will sequentially create:\n1 VPC 1 Public Subnet 1 Internet Gateway 1 Route Table 1 Security Group 1 EC2 instance with Docker installed The architecture overview after completing this step will be as follows\nContent 2.1 Create VPC\n2.2 Create Public Subnet\n2.3 Create Internet Gateway\n2.4 Create Route Table\n2.5 Create Security Group\n2.6 Create EC2 Instance\n2.7 Install Docker\n"
 },
 {
 	"uri": "/4-githubactions/4.3-check/",
@@ -123,7 +123,7 @@
 	"title": "Work with Github Actions",
 	"tags": [],
 	"description": "",
-	"content": "\nIn this section, we will proceed with the steps to create a complete CI/CD workflow using Github Actions.\nNội dung: 4.1 Create Secrets 4.2 Create Workflows 4.3 Check CI/CD Process "
+	"content": "\nIn this section, we will proceed with the steps to create a complete CI/CD workflow using Github Actions.\nContent 4.1 Create Secrets\n4.2 Create Workflows\n4.3 Check CI/CD Process\n"
 },
 {
 	"uri": "/2-preparation/2.5-createsg/",
@@ -144,7 +144,7 @@
 	"title": "Update and Check",
 	"tags": [],
 	"description": "",
-	"content": "Update and Check In this step, to better understand how the CI/CD process will happen, we will update the code, push the code, and then check the CI/CD process again.\nContent: 5.1 Update Code 5.2 Check CI/CD Process Again "
+	"content": "Update and Check In this step, to better understand how the CI/CD process will happen, we will update the code, push the code, and then check the CI/CD process again.\nContent 5.1 Update Code\n5.2 Check CI/CD Process Again\n"
 },
 {
 	"uri": "/6-cleanup/",
